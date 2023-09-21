@@ -1,0 +1,15 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF ;
+    
+}
+
+div img{
+}
+
+.aside{
+    border-right-color: 1px solid #D5DBDB;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
