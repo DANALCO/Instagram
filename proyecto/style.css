@@ -1,0 +1,134 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.main_login{
+    display: flex;
+    margin-top: -90px;
+}
+
+.img__phones img{
+    width: 380px;
+}
+
+.container__main__login{
+    margin: 50px;
+}
+
+/* Estilo del contenedor de inicio de sesión */
+.container__login {
+    margin-top: -35px;
+    background-color: #ffffff;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 20px 20px 20px  20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 300px;
+    height: auto;
+    
+}
+
+.container__login img{
+    width: 170px;
+    padding: 25px;
+}
+
+/* Estilo de etiquetas y entradas de formulario */
+.formulario-label {
+    display: block;
+    font-weight: bold;    
+}
+
+.formulario-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 12px;
+    width: 250px;
+    margin-bottom: -50px;
+}
+
+/* Estilo del botón de inicio de sesión */
+.formulario-submit {
+    margin-top: 10px;
+    background-color: #71c3f5;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.separador{
+    margin: -20px;
+}
+
+/* Estilo del botón de inicio de sesión con Facebook */
+.iniciar__seccion_facebook {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 17px;
+}
+
+.iniciar__seccion_facebook img{
+    width: 9%;
+    padding: 0;
+}
+
+.iniciar__seccion_facebook button {
+    background-color: transparent;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    color: #3b5998;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+/* Estilo del botón de olvidar contraseña */
+.olvido_contraseña {
+    text-align: center;
+}
+
+.olvido_contraseña button {
+    color: rgb(3, 24, 44);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.registrar{
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.registrar button{
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    color: #3b5998;
+    cursor: pointer;
+    font-size: 14px;
+}
