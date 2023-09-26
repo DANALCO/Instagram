@@ -4,6 +4,7 @@
 body {
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center; 
     height: 100vh; 
@@ -12,7 +13,6 @@ body {
 
 .main_login{
     display: flex;
-    margin-top: -90px;
 }
 
 .img__phones img{
@@ -40,7 +40,7 @@ body {
 
 .container__login img{
     width: 170px;
-    padding: 25px;
+    padding: 30px 20px 40px 20px;
 }
 
 /* Estilo de etiquetas y entradas de formulario */
@@ -50,25 +50,27 @@ body {
 }
 
 .formulario-input {
+    background-color: rgb(250, 250, 250);
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 12px;
     width: 250px;
-    margin-bottom: -50px;
+    margin: 0 0 -50px 0;
 }
 
 /* Estilo del botón de inicio de sesión */
 .formulario-submit {
     margin-top: 10px;
-    background-color: #71c3f5;
+    background-color: #57b5f0;
     border: none;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
-    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 15px;
     width: 100%;
     margin-bottom: 7px;
 }
@@ -77,16 +79,23 @@ body {
     margin: -20px;
 }
 
+.separador img{
+   width: 260px;
+   height: 15px;
+}
+
 /* Estilo del botón de inicio de sesión con Facebook */
 .iniciar__seccion_facebook {
     display: flex;
+    align-items: center;
     text-align: center;
     justify-content: center;
     margin-bottom: 17px;
 }
 
 .iniciar__seccion_facebook img{
-    width: 9%;
+    width: 5%;
+    height: 5%;
     padding: 0;
 }
 
@@ -98,7 +107,7 @@ body {
     color: #3b5998;
     cursor: pointer;
     font-size: 12px;
-    padding: 10px 15px;
+    padding: 10px 8px;
 }
 
 /* Estilo del botón de olvidar contraseña */
@@ -107,7 +116,7 @@ body {
 }
 
 .olvido_contraseña button {
-    color: rgb(3, 24, 44);
+    color: rgb(0, 55, 107);
     background: none;
     border: none;
     cursor: pointer;
@@ -115,20 +124,98 @@ body {
 }
 
 .registrar{
+    width: auto !important;
     justify-content: center;
     background-color: #ffffff;
     border: 1px solid rgb(219, 219, 219);
     border-radius: 5px;
-    padding: 20px 20px 20px 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    padding: 20px 5px;
     display: flex;
+    align-items: center;
+}
+
+.registrar p{
+    color: black ;
+    font-size: 13px;
+    text-align: center;
 }
 
 .registrar button{
     background-color: transparent;
     border: none;
     border-radius: 3px;
-    color: #3b5998;
+    color: rgb(0, 149, 246);
     cursor: pointer;
     font-size: 14px;
+    font-weight: 500;
 }
+
+.descargar__aplicacion{
+    width: auto !important;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+}
+
+.descargar__aplicacion p {
+    margin: 10px;
+}
+
+.tiendas__aplicacion img{
+    padding: 10px;
+    width: 120px;
+}
+
+.barra__navegacion{
+    color: rgb(115, 115, 115);
+    font-size: 14px;
+}
+
+.barra__navegacion ul {
+    display: flex ;
+}
+
+.barra__navegacion ul li {
+    padding: 5px;
+}
+
+.cambiar__idioma {
+    display: flex ;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative; /* Agregamos posición relativa al contenedor */
+  }
+  
+  #botonIdiomas {
+    color: rgb(115, 115, 115);
+    background: none; /* Elimina el fondo */
+    border: none; /* Elimina los bordes */
+    outline: none; /* Elimina el borde de enfoque al hacer clic */
+}
+
+
+  .oculto {
+    display: none;
+    font-size: 14px;
+    font-weight: 100;
+    position: absolute; /* Cambiamos a posición absoluta */
+    top: -700px; /* Colocamos la lista 50px arriba del contenedor */
+    background-color: white; /* Añadimos un fondo blanco */
+    list-style: none; /* Quitamos los estilos de lista */
+    padding: 0; /* Eliminamos el relleno de la lista */
+    border: 1px solid #ccc; /* Añadimos un borde para separar visualmente */
+    width: 150px; /* Ajusta el ancho según tus preferencias */
+  }
+  
+  .oculto li:hover {
+    background-color: rgb(66, 97, 236);
+    color: white; /* Cambiamos el color del texto al hacer hover */
+  }
+
+  .p__footer{
+    color: rgb(115, 115, 115);
+  }
