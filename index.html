@@ -1,181 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" href="./img/logoinsta.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="shortcut icon" href="./img/logoinsta.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
-    <link href="./index.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Montserrat:ital,wght@0,400;1,200&family=Roboto:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link href="./index.css" rel="stylesheet" />
+    <link href="./stories.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Montserrat:ital,wght@0,400;1,200&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <main>
-        <div class="aside">
-            <img class="logo" src="./img/instagram-logo-vector.png" width="103px">
-            <nav class="contendor_op">
-                <ul>
-                    <li class="opciones"><a class="ref" href="#" ><img src="./img/homeblack.png" width="27px" style="margin-right: 15px;">Inicio</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="./img/buscar.png" width="28px" style="margin-right: 15px; margin-bottom: -7px;">Buscar</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="./img/explore.png" width="27x" style="margin-right: 15px; margin-bottom: -7px;">Explorar</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="./img/reel.png" width="30px" style="margin-right: 15px; margin-bottom: -7px;">Reels</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="./img/messenger.png" width="24px" style="margin-right: 15px; margin-bottom: -7px;">Mensajes</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="img/heart.png" width="26px" style="margin-right: 15px; margin-bottom: -7px;">Notificaciones</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="img/add.png" width="26px" style="margin-right: 15px; margin-bottom: -7px;">Crear</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="img/perfil.jpg" width="26px" style="margin-right: 15px;margin-bottom: -7px; border-radius: 150px;">Perfil</a></li>
-                    <li class="opcionesmenu"><a class="refmenu" href="#" ><img src="img/menu.png" width="23px" style="margin-right: 15px; margin-bottom:-7px ;">Más</a></li>
-                </ul>
-            </nav>
+      <div class="aside">
+        <img class="logo" src="./img/instagram-logo-vector.png" width="103px" />
+        <div class="contendor_op">
+          <div class="inicio">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-home-2"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+              <path d="M10 12h4v4h-4z" />
+            </svg>
+            Inicio
+          </div>
+
+          <div class="buscar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-search"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            Buscar
+          </div>
+
+          <div class="explorar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-safari"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            </svg>
+            Explorar
+          </div>
+
+          <div class="reels">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-youtube"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"
+              />
+              <path d="M10 9l5 3l-5 3z" />
+            </svg>
+            Reels
+          </div>
+
+          <div class="mensajes">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-messenger"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" />
+              <path d="M8 13l3 -2l2 2l3 -2" />
+            </svg>
+            Mensajes
+          </div>
+
+          <div class="notificaciones">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+              />
+            </svg>
+            Notificaciones
+          </div>
+
+          <div class="crear">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-plus"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="padding-right: 5px; margin-bottom: -5px"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+              <path d="M9 12h6" />
+              <path d="M12 9v6" />
+            </svg>
+            Crear
+          </div>
+
+          <div class="perfil_menu">
+            <img
+              src="./img/fotos_perfil/perfil1.jpg"
+              width="25"
+              height="25"
+              style="
+                border-radius: 150px;
+                padding-right: 5px;
+                margin-bottom: -5px;
+              "
+            />
+            Perfil
+          </div>
         </div>
 
-        <div class="aside_right">
-            <nav class="perfil">
-                <img src="./img/perfil.jpg" width="45px" style="border-radius: 76px;">
-                <nav class="username">
-                    <b>gabym_g26</b>
-                    Gaby Morales García
-                </nav>
+        <!--Boton más-->
 
-                <nav class="cambiar">
-                    Cambiar
-                </nav>
-            </nav>
+        <div class="mas">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-baseline-density-medium"
+            width="25"
+            height="25"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#000000"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="padding-right: 5px; margin-bottom: -5px"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 20h16" />
+            <path d="M4 12h16" />
+            <path d="M4 4h16" />
+          </svg>
+          Más
+          <div class="menu_mas actives">
+            <div class="ref_mas">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-settings"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="padding-right: 5px"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                />
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+              </svg>
+              Configuración
+            </div>
 
-            <nav class="sugerencias">
-                <b style="color: grey;">Sugerencias para ti</b>
-                Ver todo
-            </nav>
+            <div class="ref_mas">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-clock-hour-7"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="padding-right: 5px"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M12 12l-2 3" />
+                <path d="M12 7v5" />
+              </svg>
+              Tu actividad
+            </div>
 
-            <nav class="lista">
+            <div class="ref_mas">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-bookmark"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="padding-right: 5px"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"
+                />
+              </svg>
+              Guardado
+            </div>
+
+            <div class="ref_mas">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-sun-low"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="padding-right: 5px"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path d="M4 12h.01" />
+                <path d="M12 4v.01" />
+                <path d="M20 12h.01" />
+                <path d="M12 20v.01" />
+                <path d="M6.31 6.31l-.01 -.01" />
+                <path d="M17.71 6.31l-.01 -.01" />
+                <path d="M17.7 17.7l.01 .01" />
+                <path d="M6.3 17.7l.01 .01" />
+              </svg>
+              Apariencia
+            </div>
+
+            <div class="ref_mas">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-alert-square-rounded"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="padding-right: 5px"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
+                />
+                <path d="M12 8v4" />
+                <path d="M12 16h.01" />
+              </svg>
+              Reportar un problema
+            </div>
+
+            <div class="down-table">
+              <p>Cambiar de cuenta</p>
+              <p>Salir</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Aside izquierdo-->
+
+      <section class="body">
+        <div class="stories-container">
+          <!--<div class="content">
+                <img src="img/stories/uno.jpg" alt=""/>
+            </div>
+
+            <div class="content">
+                <img src="img/stories/dos.jpg" alt=""/>
+            </div>
+
+            <div class="content">
+                <img src="img/stories/tres.jpg" alt=""/>
+            </div>
+
+            <div class="content">
+                <img src="img/stories/cuartojpg.jpg" alt=""/>
+            </div>
+
+            <div class="content">
+                <img src="img/stories/quinto.jpg" alt=""/>
+            </div>
         
-                <nav class="perfil_sugerencias">
-                    <img src="./img/perfil.jpg" width="45px" style="border-radius: 76px;">
-                    <nav class="username">
-                        <b>gabym_g26</b>
-                        Gaby Morales García
-                    </nav>
-                
-                    <nav class="cambiar">
-                        Seguir
-                    </nav>
-                </nav>
-
-                <nav class="perfil_sugerencias">
-                    <img src="./img/perfil.jpg" width="45px" style="border-radius: 76px;">
-                    <nav class="username">
-                        <b>gabym_g26</b>
-                        Gaby Morales García
-                    </nav>
-                
-                    <nav class="cambiar">
-                        Seguir
-                    </nav>
-                </nav>
-
-                <nav class="perfil_sugerencias">
-                    <img src="./img/perfil.jpg" width="45px" style="border-radius: 76px;">
-                    <nav class="username">
-                        <b>gabym_g26</b>
-                        Gaby Morales García
-                    </nav>
-                
-                    <nav class="cambiar">
-                        Seguir
-                    </nav>
-                </nav>
-
-                <nav class="perfil_sugerencias">
-                    <img src="./img/perfil.jpg" width="45px" style="border-radius: 76px;">
-                    <nav class="username">
-                        <b>gabym_g26</b>
-                        Gaby Morales García
-                    </nav>
-                
-                    <nav class="cambiar">
-                        Seguir
-                    </nav>
-                </nav>
-
-                <nav class="perfil_sugerencias">
-                    <img src="./img/perfil.jpg" width="45px" style="border-radius: 76px;">
-                    <nav class="username">
-                        <b>gabym_g26</b>
-                        Gaby Morales García
-                    </nav>
-                
-                    <nav class="cambiar">
-                        Seguir
-                    </nav>
-                </nav>
-            </nav>
-
-            <nav class="footer">
-                <nav class="links">
-                    <a href="https://about.instagram.com/" target="_blank">Información. </a><a href="https://help.instagram.com/" target="_blank">Ayuda. </a><a href="https://about.instagram.com/blog" target="_blank">Prensa. </a><a href="https://developers.facebook.com/docs/instagram" target="_blank">API. </a><a href="" target="_blank">Empleo. </a>
-                    <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect" target="_blank">Privacidad. </a><a href="https://help.instagram.com/581066165581870/" target="_blank">Condiciones. </a><a href="https://www.instagram.com/explore/locations/" target="_blank">Ubicaciones. </a><a href="https://www.instagram.com/language/preferences/" target="_blank">Idioma. </a><br>
-                    <a href="https://about.meta.com/technologies/meta-verified/" target="_blank">Mera Verified. </a>
-                </nav>
-
-                <nav class="end">
-                    &copy 2023 INSTAGRAM FROM META
-                </nav>
-            </nav>
-        </div>
-
-        <div class="story-container">
-            <!--<div class="content">
-                <img src="img/stories/uno.jpg" alt="">
-            </div>
             <div class="content">
-                <img src="img/stories/dos.jpg" alt="">
+                <img src="img/stories/quinto.jpg" alt=""/>
             </div>
+        
             <div class="content">
-                <img src="img/stories/tres.jpg" alt="">
+                <img src="img/stories/quinto.jpg" alt=""/>
             </div>
-            <div class="content">
-                <img src="img/stories/cuartojpg.jpg" alt="">
-            </div>
-
+        
             <div class="content">
                 <img src="img/stories/quinto.jpg" alt=""/>
             </div>-->
         </div>
 
-            <div class="story-full">
-               <div class="content">
-                    <div class="close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M18 6l-12 12" />
-                            <path d="M6 6l12 12" />
-                          </svg>
-                    </div>
-                
-                    <div class="left-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M13 15l-3 -3l3 -3" />
-                            <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
-                          </svg>
-                    </div>
+        <div class="Nombres_perfiles"></div>
 
-                    <img src="img/stories/uno.jpg">
-
-                    <div class="right-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M11 9l3 3l-3 3" />
-                            <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
-                          </svg>
-                    </div>
-
-                    <div class="tittle">Test Tittle</div>
-                </div>
+        <div class="story-full">
+          <div class="content">
+            <div class="close-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#fff"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </div>
+
+            <div class="left-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#fff"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </div>
+
+            <img src="img/stories/cuarto.jpg" alt="" />
+
+            <div class="right-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#fff"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+
+            <div class="title">Test Title</div>
+
+            <div class="like-bottom">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-heart"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+                />
+              </svg>
+            </div>
+
+            <div class="send-bottom">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-send"
+                width="38"
+                height="38"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 14l11 -11" />
+                <path
+                  d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Stories-->
+
+      <!--Aside derecho-->
+      <div class="aside_right">
+        <nav class="perfil">
+          <img
+            src="./img/fotos_perfil/perfil1.jpg"
+            width="45"
+            height="45"
+            style="border-radius: 76px; padding-right: 5px"
+          />
+          <nav class="username">
+            <b>gabym_g26</b>
+            Gaby Morales García
+          </nav>
+
+          <nav class="cambiar">Cambiar</nav>
+        </nav>
+
+        <nav class="sugerencias">
+          <b style="color: grey">Sugerencias para ti</b>
+          Ver todo
+        </nav>
+
+        <nav class="lista">
+          <nav class="perfil_sugerencias">
+            <img
+              src="./img/perfil.jpg"
+              width="45px"
+              style="border-radius: 76px"
+            />
+            <nav class="username">
+              <b>gabym_g26</b>
+              Gaby Morales García
+            </nav>
+
+            <nav class="cambiar">Seguir</nav>
+          </nav>
+
+          <nav class="perfil_sugerencias">
+            <img
+              src="./img/perfil.jpg"
+              width="45px"
+              style="border-radius: 76px"
+            />
+            <nav class="username">
+              <b>gabym_g26</b>
+              Gaby Morales García
+            </nav>
+
+            <nav class="cambiar">Seguir</nav>
+          </nav>
+
+          <nav class="perfil_sugerencias">
+            <img
+              src="./img/perfil.jpg"
+              width="45px"
+              style="border-radius: 76px"
+            />
+            <nav class="username">
+              <b>gabym_g26</b>
+              Gaby Morales García
+            </nav>
+
+            <nav class="cambiar">Seguir</nav>
+          </nav>
+
+          <nav class="perfil_sugerencias">
+            <img
+              src="./img/perfil.jpg"
+              width="45px"
+              style="border-radius: 76px"
+            />
+            <nav class="username">
+              <b>gabym_g26</b>
+              Gaby Morales García
+            </nav>
+
+            <nav class="cambiar">Seguir</nav>
+          </nav>
+
+          <nav class="perfil_sugerencias">
+            <img
+              src="./img/perfil.jpg"
+              width="45px"
+              style="border-radius: 76px"
+            />
+            <nav class="username">
+              <b>gabym_g26</b>
+              Gaby Morales García
+            </nav>
+
+            <nav class="cambiar">Seguir</nav>
+          </nav>
+        </nav>
+
+        <nav class="footer">
+          <nav class="links">
+            <a href="https://about.instagram.com/" target="_blank"
+              >Información. </a
+            ><a href="https://help.instagram.com/" target="_blank">Ayuda. </a
+            ><a href="https://about.instagram.com/blog" target="_blank"
+              >Prensa. </a
+            ><a
+              href="https://developers.facebook.com/docs/instagram"
+              target="_blank"
+              >API. </a
+            ><a href="" target="_blank">Empleo. </a>
+            <a
+              href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect"
+              target="_blank"
+              >Privacidad. </a
+            ><a
+              href="https://help.instagram.com/581066165581870/"
+              target="_blank"
+              >Condiciones. </a
+            ><a
+              href="https://www.instagram.com/explore/locations/"
+              target="_blank"
+              >Ubicaciones. </a
+            ><a
+              href="https://www.instagram.com/language/preferences/"
+              target="_blank"
+              >Idioma. </a
+            ><br />
+            <a
+              href="https://about.meta.com/technologies/meta-verified/"
+              target="_blank"
+              >Mera Verified.
+            </a>
+          </nav>
+
+          <nav class="end">&copy 2023 INSTAGRAM FROM META</nav>
+        </nav>
+      </div>
     </main>
-    <script src="main.js"></script>
-</body>
+    <script src="./stories.js"></script>
+    <script src="./mas.js"></script>
+  </body>
 </html>
