@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para el contenedor principal "cont-video" */
+        .cont-video {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 20px;
+            width: 30%;
+            position: relative; /* Para que el botón esté posicionado relativo a este contenedor */
+        }
+
+        /* Estilo para el sub-contenedor "vid" */
+        .vid {
+            border-radius: 5px;
+            flex: 1;
+            overflow: hidden;
+            position: relative; /* Para que el botón esté posicionado relativo a este contenedor */
+        }
+        /* Estilo para el video dentro de "vid" */
+        .vid video {
+            width:480px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo para la imagen dentro de "vid" */
+        .pausa {
+            position: absolute;
+            top: 46%;
+            left: 41%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Asegura que la imagen esté por encima del video */
+            cursor: pointer;
+        }
+
+        /* Estilo para el sub-contenedor "bar" */
+        .bar {
+            width: 100px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Estilo para los botones dentro de "bar" */
+        .bar button {
+            background: none;
+            border: none;
+            padding: 30px 0 0 0;
+            margin: 0 0 0 30px;
+        }
+        .bar button:hover {
+            filter: brightness(0.7); /* Puedes ajustar el valor para cambiar el nivel de brillo */
+        }
+        /* Estilo para el botón de mute */
+        .mute-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: gray;
+            border-radius: 50%; /* Para hacerlo circular */
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .oculto {
+            display: none;
+            transform: scale(0); /* Inicialmente, la imagen está escalada a 0 */
+            transform-origin: center center; /* Establecer el punto de origen en el centro */
+            animation: none;
+        }
+
+        .visible {
+            display: block;
+            animation: aparecer 0.8s forwards;
+        }
+
+        .desaparecer {
+            display: block;
+            animation: desaparecer 0.5s forwards;
+        }
+
+        @keyframes aparecer {
+            0% {
+                transform: scale(0); /* Escalar desde 0 */
+            }
+            70% {
+                transform: scale(1.1); /* Escalar al 110% en el centro */
+            }
+            100% {
+                transform: scale(1); /* Escalar de nuevo al 100% */
+            }
+        }
+
+        @keyframes desaparecer {
+            0% {
+                transform: scale(1); /* Escalar desde 100% */
+            }
+            50% {
+                transform: scale(1.1);/* Escalar al 110% en el centro */
+            }
+            100% {
+                transform: scale(0); /* Escalar a 0 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont-video">
+        <div class="vid">
+            <video class="mostrarBtn myVideo" src="../assets/videos/video2.mp4" autoplay muted loop></video>
+            <img src="../assets/iconos/play.png" width="80px" alt="Imagen" class="oculto pausa">
+            <div class="mute-button" onclick="Mutear()"><img src="../assets/iconos/heart.png" width="20px" alt="Botón Mute"></div>
+        </div>
+        <div class="bar">
+            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 1"></button>
+            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 2"></button>
+            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 3"></button>
+            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 4"></button>
+            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 5"></button>
+            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 6"></button>
+        </div>
+    </div>
+    <script>
+        const video = document.querySelector('.myVideo');
+        const muteButton = document.querySelector('.mute-button');
+        const pausa = document.querySelector('.pausa');
+        let videoPaused = false;
+
+        function Mutear() {
+            if (video.muted) {
+                video.muted = false;
+                muteButton.style.backgroundColor = 'red';
+            } else {
+                video.muted = true;
+                muteButton.style.backgroundColor = 'gray'; // Opcional: Cambiar el color cuando está muteado
+            }
+        }
+
+        const mostrarBtn = document.querySelector('.mostrarBtn');
+
+        mostrarBtn.addEventListener('click', () => {
+            if (pausa.classList.contains('oculto')) {
+                // Mostrar imagen
+                pausa.classList.remove('oculto');
+                pausa.classList.remove('desaparecer'); // Quitar la clase de desaparición si estaba presente
+                pausa.classList.add('visible');
+                if (!videoPaused) {
+                    video.pause(); // Pausar el video
+                    videoPaused = true;
+                }
+            } else {
+                // Ocultar imagen con animación de desaparición
+                pausa.classList.remove('visible');
+                pausa.classList.add('desaparecer');
+                if (videoPaused) {
+                    video.play(); // Reanudar el video
+                    videoPaused = false;
+                }
+                // Después de la animación de desaparición, restablecer la imagen a su estado inicial
+                setTimeout(() => {
+                    pausa.classList.remove('desaparecer');
+                    pausa.classList.add('oculto');
+                }, 500); // La duración de la animación de desaparición es de 0.5 segundos
+            }
+        });
+
+        pausa.addEventListener('click', () => {
+            if (pausa.classList.contains('oculto')) {
+                // Mostrar imagen
+                pausa.classList.remove('oculto');
+                pausa.classList.remove('desaparecer'); // Quitar la clase de desaparición si estaba presente
+                pausa.classList.add('visible');
+                if (!videoPaused) {
+                    video.pause(); // Pausar el video
+                    videoPaused = true;
+                }
+            } else {
+                // Ocultar imagen con animación de desaparición
+                pausa.classList.remove('visible');
+                pausa.classList.add('desaparecer');
+                if (videoPaused) {
+                    video.play(); // Reanudar el video
+                    videoPaused = false;
+                }
+                // Después de la animación de desaparición, restablecer la imagen a su estado inicial
+                setTimeout(() => {
+                    pausa.classList.remove('desaparecer');
+                    pausa.classList.add('oculto');
+                }, 500); // La duración de la animación de desaparición es de 0.5 segundos
+            }
+        });
+    </script>
+</body>
+</html>
