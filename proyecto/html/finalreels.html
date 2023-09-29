@@ -49,13 +49,15 @@
 
         /* Estilo para los botones dentro de "bar" */
         .bar button {
-            background: none;
+            background-color: white;
             border: none;
             padding: 30px 0 0 0;
             margin: 0 0 0 30px;
+            cursor: pointer;
+
         }
-        .bar button:hover {
-            filter: brightness(0.7); /* Puedes ajustar el valor para cambiar el nivel de brillo */
+        .bar button:hover{
+            opacity: 0.5; /* Puedes ajustar el valor para cambiar el nivel de brillo */
         }
         /* Estilo para el botón de mute */
         .mute-button {
@@ -118,30 +120,31 @@
         <div class="vid">
             <video class="mostrarBtn myVideo" src="../assets/videos/video2.mp4" autoplay muted loop></video>
             <img src="../assets/iconos/play.png" width="80px" alt="Imagen" class="oculto pausa">
-            <div class="mute-button" onclick="Mutear()"><img src="../assets/iconos/heart.png" width="20px" alt="Botón Mute"></div>
+            <div class="mute-button" onclick="Mutear()"><img src="../assets/iconos/audio-off.png" width="20px" class="mute" alt="Botón Mute"></div>
         </div>
         <div class="bar">
-            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 1"></button>
-            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 2"></button>
-            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 3"></button>
-            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 4"></button>
-            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 5"></button>
-            <button><img src="../assets/iconos/heart.png" width="20px" alt="Botón 6"></button>
+            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 1"><br>5</button>
+            <button><img src="../assets/iconos/messenger.png" width="40px" alt="Botón 2"></button>
+            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 3"></button>
+            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 4"></button>
+            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 5"></button>
+            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 6"></button>
         </div>
     </div>
     <script>
         const video = document.querySelector('.myVideo');
         const muteButton = document.querySelector('.mute-button');
+        const mute = document.querySelector('.mute')
         const pausa = document.querySelector('.pausa');
         let videoPaused = false;
 
         function Mutear() {
             if (video.muted) {
                 video.muted = false;
-                muteButton.style.backgroundColor = 'red';
+                mute.src = "../assets/iconos/audio-on.png";
             } else {
                 video.muted = true;
-                muteButton.style.backgroundColor = 'gray'; // Opcional: Cambiar el color cuando está muteado
+                mute.src = "../assets/iconos/audio-off.png";
             }
         }
 
