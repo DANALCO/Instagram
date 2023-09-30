@@ -51,8 +51,8 @@
         .bar button {
             background-color: white;
             border: none;
-            padding: 30px 0 0 0;
-            margin: 0 0 0 30px;
+            padding: 25px 0 0 0;
+            margin: 0 0 0 20px;
             cursor: pointer;
 
         }
@@ -89,7 +89,151 @@
             display: block;
             animation: desaparecer 0.5s forwards;
         }
+                /* Estilos CSS para la imagen */
+                .corazon {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        button {
+            border: none;
+            background-color: white;
+        }
+        .buttom:hover {
+            /* Establece el efecto de hover para todo el contenido */
+            opacity: 0.5;
+        }
 
+        /* Estilos CSS para el párrafo */
+        button p {
+            margin: 0; /* Elimina el margen predeterminado del párrafo */
+        }
+        .comments-container {
+            position: absolute;
+            left: 540px;
+            top: 140px;
+            width: 300px;
+            height: 490px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 2;
+        }
+        .titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            height: 30px;
+        }
+
+        .titulo button {
+            background-color: transparent;
+            border: none;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            width: 5px;
+        }
+
+        .titulo h2 {
+            position: relative;
+            right: 0px;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .comments {
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow-y: scroll;
+            height: 368px;
+        }
+
+        .add-comment {
+            display: flex;
+            align-items: center;
+            border: 1px #CCC solid;
+            border-radius: 100px;
+            margin: 0 auto;
+            padding: 5px;
+            width: 250px;
+            height: 30px;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 50px;
+            font-size: 15px;
+        }   
+
+        .add-comment button {
+            background-color: transparent;
+            color: #0095f6;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 0;
+            font-size: 15px;
+            cursor: pointer;
+            width: auto;
+        }
+        .user-avatar {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border: 1px #CCC solid;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .user-avatar img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
+
+        /* Estilos para el contenedor adicional */
+        .emoji-container {
+            position: absolute;
+            left: 730px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+            top: 325px;
+            width: 300px;
+            height: 245px;
+            display: none;
+        }
+        .emoji:hover{
+            opacity: 0.5;
+        }
+        /* Animación CSS para agrandar y luego encojer la imagen */
+        @keyframes palpitar {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
         @keyframes aparecer {
             0% {
                 transform: scale(0); /* Escalar desde 0 */
@@ -123,13 +267,34 @@
             <div class="mute-button" onclick="Mutear()"><img src="../assets/iconos/audio-off.png" width="20px" class="mute" alt="Botón Mute"></div>
         </div>
         <div class="bar">
-            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 1"><br>5</button>
-            <button><img src="../assets/iconos/messenger.png" width="40px" alt="Botón 2"></button>
-            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 3"></button>
-            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 4"></button>
-            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 5"></button>
-            <button><img src="../assets/iconos/heart.png" width="40px" alt="Botón 6"></button>
+            <button><img src="../assets/iconos/heart.png" class="corazon" width="25px" alt="Botón 1"><p>5</p></button>
+            <button><img src="../assets/iconos/messenger.png" onclick="toggleComments()" width="25px" alt="Botón 2"><p>0</p></button>
+            <button><img src="../assets/iconos/send.png" width="25px" alt="Botón 3"></button>
+            <button><img src="../assets/iconos/heart.png" width="25px" alt="Botón 4"></button>
+            <button><img src="../assets/iconos/heart.png" width="25px" alt="Botón 5"></button>
+            <button><img src="../assets/iconos/heart.png" width="25px" alt="Botón 6"></button>
         </div>
+        <div class="comments-container">
+            <div class="titulo">
+              <button onclick="closeComments()">X</button>
+              <h2>Comentarios</h2>
+            </div>
+            <div class="comments">
+              <!-- Comentarios aquí -->
+            </div>
+            <div class="add-comment">
+              <div class="user-avatar">
+                <img src="../assets/iconos/add black.png" alt="Avatar">
+              </div>
+              <input type="text" class="comment-input" placeholder="Escribe un comentario..." oninput="commentButton()" style="border: none;">
+              <button class="publish-button" onclick="addComment()" style="display: none;">Publicar</button>
+              <img src="../assets/iconos/emoji.png" class="emoji" width="25px" style="margin: 0 5px 0 0; cursor: pointer;" alt="Botón de imagen" onclick="emojiButtonClick()">
+            </div>
+          </div>
+          <div class="emoji-container">
+              <!-- Contenido de emojis aquí -->
+              <!-- Por ejemplo, puedes agregar emojis como imágenes o texto aquí -->
+          </div>
     </div>
     <script>
         const video = document.querySelector('.myVideo');
@@ -201,6 +366,113 @@
                 }, 500); // La duración de la animación de desaparición es de 0.5 segundos
             }
         });
+        // Variable para rastrear el estado actual de la imagen
+        let imagenActual = 1;
+
+        // Función para cambiar la imagen y aplicar la animación
+        function cambiarImagen() {
+            const corazon = document.querySelector(".corazon");
+
+            // Cambia la imagen y el estado actual
+            if (imagenActual === 1) {
+                corazon.src = "../assets/iconos/heart black.png";
+                imagenActual = 2;
+
+                // Aplica la animación "palpitar"
+                corazon.style.animation = "palpitar 0.3s";
+                setTimeout(() => {
+                    corazon.style.animation = ""; // Restaura la animación
+                }, 300);
+            } else {
+                corazon.src = "../assets/iconos/heart.png";
+                imagenActual = 1;
+            }
+        }
+
+        // Función para manejar el evento mouseout
+        function onMouseOut() {
+            if (imagenActual === 1) {
+                const corazon = document.querySelector(".corazon");
+                // Aplica la animación "palpitar" en caso de mouseout
+                corazon.style.animation = "palpitar 0.3s";
+                setTimeout(() => {
+                    corazon.style.animation = ""; // Restaura la animación
+                }, 300);
+            }
+        }
+
+        // Agrega eventos click y mouseout al corazón
+        const corazon = document.querySelector(".corazon");
+        corazon.addEventListener("click", cambiarImagen);
+        corazon.addEventListener("mouseout", onMouseOut);
+
+        function commentButton() {
+            const commentInput = document.querySelector(".comment-input");
+            const publishButton = document.querySelector(".publish-button");
+        
+            if (commentInput.value.trim() !== "") {
+                publishButton.style.display = "block";
+            } else {
+                publishButton.style.display = "none";
+            }
+        }
+      
+        function addComment() {
+            const commentInput = document.querySelector(".comment-input");
+            const commentText = commentInput.value.trim();
+        
+            if (commentText !== "") {
+                const commentsDiv = document.querySelector(".comments");
+                const newComment = document.createElement("div");
+                newComment.textContent = commentText;
+                commentsDiv.appendChild(newComment);
+                commentInput.value = "";
+                commentButton();
+            }
+        }
+        let commentsVisible = false;
+
+        function toggleComments() {
+            const commentsContainer = document.querySelector(".comments-container");
+            
+            commentsVisible = !commentsVisible;
+
+            if (commentsVisible) {
+                commentsContainer.style.display = "block";
+                // No mostramos emoji-container aquí
+            } else {
+                commentsContainer.style.display = "none";
+                document.querySelector(".emoji-container").style.display = "none"; // Ocultar emoji-container
+                if (emojiContainerVisible){
+                    emojiContainerVisible = !emojiContainerVisible;
+                }
+            }
+        }
+
+        function closeComments() {
+            const commentsContainer = document.querySelector(".comments-container");
+            commentsVisible = !commentsVisible;
+            commentsContainer.style.display = "none";
+            document.querySelector(".emoji-container").style.display = "none"; // Ocultar emoji-container
+            if (emojiContainerVisible){
+                emojiContainerVisible = !emojiContainerVisible;
+            }
+        }
+
+        let emojiContainerVisible = false;
+
+        function emojiButtonClick() {
+            if (commentsVisible) {
+                const emojiContainer = document.querySelector(".emoji-container");
+                emojiContainerVisible = !emojiContainerVisible;
+
+                if (emojiContainerVisible) {
+                    emojiContainer.style.display = "block"; // Mostrar emoji-container
+                } else {
+                    emojiContainer.style.display = "none"; // Ocultar emoji-container
+                }
+            }
+        }
     </script>
 </body>
 </html>
