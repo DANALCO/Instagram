@@ -2,43 +2,43 @@ const allStories = [
   {
     thumbUrl: "img/fotos_perfil/perfil1.jpg",
     imageUrl: "img/stories/uno.jpg",
-    title: "Responde a",
+    title: "Responde a...",
   },
 
   {
     thumbUrl: "img/fotos_perfil/perfil5.jpg",
     imageUrl: "img/stories/dos.jpg",
-    title: "Titulo No.2",
+    title: "Responde a...",
   },
 
   {
     thumbUrl: "img/fotos_perfil/perfil2.jpg",
     imageUrl: "img/stories/tres.jpg",
-    title: "Titulo No.3",
+    title: "Responde a...",
   },
 
   {
     thumbUrl: "img/fotos_perfil/perfil6.jpg",
     imageUrl: "img/stories/cuartojpg.jpg",
-    title: "Titulo No.4",
+    title: "Responde a...",
   },
 
   {
     thumbUrl: "img/fotos_perfil/perfil3.jpg",
     imageUrl: "img/stories/quinto.jpg",
-    title: "Titulo No.5",
+    title: "Responde a...",
   },
 
   {
     thumbUrl: "img/fotos_perfil/perfil7.jpg",
     imageUrl: "img/stories/sexto.jpg",
-    title: "Titulo No.5",
+    title: "Responde a...",
   },
 
   {
     thumbUrl: "img/fotos_perfil/perfil4.jpg",
     imageUrl: "img/stories/septimo.jpg",
-    title: "Titulo No.5",
+    title: "Responde a...",
   },
 
   {

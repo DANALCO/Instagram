@@ -71,10 +71,6 @@
   transition: all 100ms ease;
 }
 
-.actives {
-  display: none;
-}
-
 .story-full.active {
   opacity: 1;
   pointer-events: auto;
