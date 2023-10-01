@@ -84,9 +84,6 @@ allStories.forEach((s, i) => {
 
     clearInterval(timer);
     timer = setInterval(nextStory, 5000);
-
-    // Now, log the storyFull element
-    console.log(storyFull);
   });
 });
 

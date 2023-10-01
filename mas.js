@@ -16,3 +16,5 @@ cambiar.addEventListener("click", () => {
 closeBtnCambiar.addEventListener("click", () => {
   cambiarContainer.classList.remove("active");
 });
+
+/*Seguir*/
