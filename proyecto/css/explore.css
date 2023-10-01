@@ -52,3 +52,38 @@
   width: 25px;
   height: 20px;
 }
+.recuadro-emergente {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 800px;
+  background-color: #fff;
+  display: none;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.seccion-izquierda {
+  background-color: red;
+  flex: 1;
+  height: 800px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Añade esta línea para recortar la imagen si es necesario */
+}
+
+.seccion-izquierda img {
+  height: 800px; /* Mantiene la proporción de aspecto de la imagen */
+}
+
+.seccion-derecha {
+  flex: 1;
+  width: 500px;
+  height: 800px;
+  background-color: #f0f0f0;
+}

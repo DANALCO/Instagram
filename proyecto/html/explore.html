@@ -10,22 +10,6 @@
 </head>
 <body>
     <div class="contenedor">
-        <div class="aside">
-            <img class="logo" src="../assets/iconos/instagram-logo-vector.png" width="103px">
-            <nav class="contendor_op">
-                <ul>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/home.png" width="27px" style="margin-right: 15px;">Inicio</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/buscar.png" width="28px" style="margin-right: 15px; margin-bottom: -7px;">Buscar</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/exploreblack.png" width="27x" style="margin-right: 15px; margin-bottom: -7px;">Explorar</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/reel.png" width="30px" style="margin-right: 15px; margin-bottom: -7px;">Reels</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/messenger.png" width="24px" style="margin-right: 15px; margin-bottom: -7px;">Mensajes</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/heart.png" width="26px" style="margin-right: 15px; margin-bottom: -7px;">Notificaciones</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/add.png" width="26px" style="margin-right: 15px; margin-bottom: -7px;">Crear</a></li>
-                    <li class="opciones"><a class="ref" href="#" ><img src="../assets/iconos/perfil.jpg" width="26px" style="margin-right: 15px;margin-bottom: -7px; border-radius: 150px;">Perfil</a></li>
-                    <li class="opcionesmenu"><a class="refmenu" href="#" ><img src="../assets/iconos/menu.png" width="23px" style="margin-right: 15px; margin-bottom:-7px ;">Más</a></li>
-                </ul>
-            </nav>
-        </div>
         <div class="contenido">
             <div class="contenedor-cartas">
                 <div class="carta">
@@ -44,7 +28,7 @@
             <!-- Segunda fila de cartas -->
             <div class="contenedor-cartas">
                 <div class="carta">
-                    <img src="../assets/Umbreon.jpg" alt="Umbreon" class="fondo-carta">
+                    <img src="../assets/iconos/add black.png" alt="Umbreon" class="fondo-carta">
                 </div>
                 <div class="carta">
                     <img src="../assets/Umbreon.jpg" alt="Umbreon" class="fondo-carta">
@@ -54,6 +38,92 @@
                 </div>
             </div>
         </div>
+        <!-- Recuadro emergente para la primera carta -->
+        <div class="recuadro-emergente" id="recuadro1">
+            <div class="seccion-izquierda">
+                <img src="" alt="" id="imagenRecuadro1">
+            </div>
+            <div class="seccion-derecha">
+                fdasbfhas
+                <!-- Contenido de la sección derecha -->
+            </div>
+        </div>
+        <!-- Recuadro emergente para la segunda carta -->
+        <div class="recuadro-emergente" id="recuadro2">
+            <div class="seccion-izquierda">
+                <img src="" alt="" id="imagenRecuadro2">
+            </div>
+            <div class="seccion-derecha">
+                adfabsufbaus
+                <!-- Contenido de la sección derecha -->
+            </div>
+        </div>
+        <!-- Recuadro emergente para la segunda carta -->
+        <div class="recuadro-emergente" id="recuadro3">
+            <div class="seccion-izquierda">
+                <img src="" alt="" id="imagenRecuadro3">
+            </div>
+            <div class="seccion-derecha">
+                adfabsufbaus
+                <!-- Contenido de la sección derecha -->
+            </div>
+        </div>
+        <!-- Recuadro emergente para la segunda carta -->
+        <div class="recuadro-emergente" id="recuadro4">
+            <div class="seccion-izquierda">
+                <img src="" alt="" id="imagenRecuadro4">
+            </div>
+            <div class="seccion-derecha">
+                adfabsufbaus
+                <!-- Contenido de la sección derecha -->
+            </div>
+        </div>
+        <!-- Recuadro emergente para la segunda carta -->
+        <div class="recuadro-emergente" id="recuadro5">
+            <div class="seccion-izquierda">
+                <img src="" alt="" id="imagenRecuadro5">
+            </div>
+            <div class="seccion-derecha">
+                adfabsufbaus
+                <!-- Contenido de la sección derecha -->
+            </div>
+        </div>
+        <!-- Recuadro emergente para la segunda carta -->
+        <div class="recuadro-emergente" id="recuadro6">
+            <div class="seccion-izquierda">
+                <img src="" alt="" id="imagenRecuadro6">
+            </div>
+            <div class="seccion-derecha">
+                adfabsufbaus
+                <!-- Contenido de la sección derecha -->
+            </div>
+        </div>
     </div>
+    <script>
+        // Obtén una referencia a todas las cartas y recuadros emergentes
+        const cartas = document.querySelectorAll('.carta');
+        const recuadrosEmergentes = document.querySelectorAll('.recuadro-emergente');
+
+        // Agrega un controlador de clic a cada carta
+        cartas.forEach((carta, index) => {
+            carta.addEventListener('click', () => {
+                // Muestra el recuadro emergente correspondiente al hacer clic
+                const recuadroEmergente = recuadrosEmergentes[index];
+                recuadroEmergente.style.display = 'flex';
+
+                // Configura la imagen en el recuadro emergente
+                const imagenCarta = carta.querySelector('.fondo-carta');
+                const imagenRecuadro = recuadroEmergente.querySelector('img');
+                imagenRecuadro.src = imagenCarta.src;
+            });
+        });
+
+        // Agrega un controlador de clic para cerrar los recuadros emergentes
+        recuadrosEmergentes.forEach((recuadroEmergente) => {
+            recuadroEmergente.addEventListener('click', () => {
+                recuadroEmergente.style.display = 'none';
+            });
+        });
+    </script>  
 </body>
 </html>
