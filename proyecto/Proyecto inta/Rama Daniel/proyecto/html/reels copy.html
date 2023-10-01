@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuadro Rojo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Para ocultar la barra de desplazamiento vertical */
+        }
+
+        #recuadro {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            overflow: hidden; /* Para ocultar los scrolls laterales */
+        }
+
+        #contenido {
+            width: 1000px; /* Ancho mayor que el del recuadro para contenido que se desplace horizontalmente */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="recuadro">
+        <div id="contenido">
+        </div>
+    </div>
+
+    <script>
+        const recuadro = document.getElementById("recuadro");
+        let animacionEnProgreso = false;
+
+        function iniciarAnimacion(scrollAmount, step) {
+            if (!animacionEnProgreso) {
+                animacionEnProgreso = true;
+                const inicio = recuadro.scrollTop;
+                const destino = inicio + scrollAmount;
+                const intervalo = 10;
+                const duracion = 1000; // Duración de la animación en milisegundos
+                let tiempoPasado = 0;
+
+                function animar() {
+                    if (tiempoPasado < duracion) {
+                        recuadro.scrollTop += (scrollAmount / duracion) * intervalo;
+                        tiempoPasado += intervalo;
+                        setTimeout(animar, intervalo);
+                    } else {
+                        recuadro.scrollTop = destino; // Asegurar que llegue al destino exacto
+                        animacionEnProgreso = false;
+                    }
+                }
+
+                animar();
+            }
+        }
+
+        window.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowDown") {
+                iniciarAnimacion(500, 10);
+            } else if (e.key === "ArrowUp") {
+                iniciarAnimacion(-500, -10);
+            }
+        });
+
+        // Manejo del evento de la rueda del ratón
+        recuadro.addEventListener("wheel", function (e) {
+            if (e.deltaY > 0) {
+                iniciarAnimacion(500, 10);
+            } else {
+                iniciarAnimacion(-500, -10);
+            }
+        });
+    </script>
+</body>
+</html>

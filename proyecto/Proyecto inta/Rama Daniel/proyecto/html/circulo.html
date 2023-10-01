@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .comments-container {
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        .titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            color: black;
+        }
+
+        .titulo button {
+            background-color: transparent;
+            border: none;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            width: 5px;
+        }
+
+        .titulo h2 {
+            position: relative;
+            right: 0px;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .comments {
+            padding: 10px;
+            margin-bottom: 10px;
+            max-height: 300px;
+            overflow-y: scroll;
+            height: 500px;
+        }
+
+        .add-comment {
+            display: flex;
+            align-items: center;
+            border: 1px #CCC solid;
+            border-radius: 100px;
+            padding: 5px;
+            height: 35px;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 50px;
+            font-size: 15px;
+        }   
+
+        button {
+            background-color: transparent;
+            color: #0095f6;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 0;
+            font-size: 15px;
+            cursor: pointer;
+            width: auto;
+        }
+        .user-avatar {
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border: 1px #CCC solid;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .user-avatar img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
+
+        /* Estilos para el contenedor adicional */
+        .emoji-container {
+            display: none;
+            position: relative;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 500px;
+            height: 500px;
+        }
+        .emoji:hover{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <button id="visible-button" onclick="toggleComments()">Visible</button>
+    <div class="comments-container">
+      <div class="titulo">
+        <button onclick="closeComments()">X</button>
+        <h2>Comentarios</h2>
+      </div>
+      <div class="comments">
+        <!-- Comentarios aquí -->
+      </div>
+      <div class="add-comment">
+        <div class="user-avatar">
+          <img src="../assets/iconos/add black.png" alt="Avatar">
+        </div>
+        <input type="text" class="comment-input" placeholder="Escribe un comentario..." oninput="commentButton()" style="border: none;">
+        <button class="publish-button" onclick="addComment()" style="display: none;">Publicar</button>
+        <img src="../assets/iconos/emoji.png" class="emoji" width="30px" style="margin: 0 5px 0 0;" alt="Botón de imagen" onclick="emojiButtonClick()">
+      </div>
+    </div>
+    <div class="emoji-container">
+        <!-- Contenido de emojis aquí -->
+        <!-- Por ejemplo, puedes agregar emojis como imágenes o texto aquí -->
+    </div>
+    <script>
+        function commentButton() {
+            const commentInput = document.querySelector(".comment-input");
+            const publishButton = document.querySelector(".publish-button");
+        
+            if (commentInput.value.trim() !== "") {
+                publishButton.style.display = "block";
+            } else {
+                publishButton.style.display = "none";
+            }
+        }
+      
+        function addComment() {
+            const commentInput = document.querySelector(".comment-input");
+            const commentText = commentInput.value.trim();
+        
+            if (commentText !== "") {
+                const commentsDiv = document.querySelector(".comments");
+                const newComment = document.createElement("div");
+                newComment.textContent = commentText;
+                commentsDiv.appendChild(newComment);
+                commentInput.value = "";
+                commentButton();
+            }
+        }
+        let commentsVisible = false;
+
+        function toggleComments() {
+            const commentsContainer = document.querySelector(".comments-container");
+            
+            commentsVisible = !commentsVisible;
+
+            if (commentsVisible) {
+                commentsContainer.style.display = "block";
+                // No mostramos emoji-container aquí
+            } else {
+                commentsContainer.style.display = "none";
+                document.querySelector(".emoji-container").style.display = "none"; // Ocultar emoji-container
+                if (emojiContainerVisible){
+                    emojiContainerVisible = !emojiContainerVisible;
+                }
+            }
+        }
+
+        function closeComments() {
+            const commentsContainer = document.querySelector(".comments-container");
+            commentsVisible = !commentsVisible;
+            commentsContainer.style.display = "none";
+            document.querySelector(".emoji-container").style.display = "none"; // Ocultar emoji-container
+            if (emojiContainerVisible){
+                emojiContainerVisible = !emojiContainerVisible;
+            }
+        }
+
+        let emojiContainerVisible = false;
+
+        function emojiButtonClick() {
+            if (commentsVisible) {
+                const emojiContainer = document.querySelector(".emoji-container");
+                emojiContainerVisible = !emojiContainerVisible;
+
+                if (emojiContainerVisible) {
+                    emojiContainer.style.display = "block"; // Mostrar emoji-container
+                } else {
+                    emojiContainer.style.display = "none"; // Ocultar emoji-container
+                }
+            }
+        }
+    </script>
+  </body>
+</html>
