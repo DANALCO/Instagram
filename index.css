@@ -24,8 +24,9 @@ main {
 .aside {
   position: fixed;
   margin-top: 0;
-  padding-right: 5px;
-  width: 20%;
+  width: 15%;
+  height: 100vh;
+  padding-right: 20px;
   border-right: #d5dbdb 1px solid;
 }
 
@@ -56,7 +57,7 @@ svg:hover {
 .mas {
   margin-top: 38px;
   cursor: pointer;
-  margin: 10px 8px;
+  margin: 100px 8px 10px 8px;
   padding: 10px;
   position: relative;
   border-radius: 5px;
