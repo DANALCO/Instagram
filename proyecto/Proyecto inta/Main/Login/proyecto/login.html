@@ -21,13 +21,15 @@
 
                     <section class="container__login">
                         <img src="/Main/Login/proyecto/instagram-logo-1.png" alt="Instagram" class="logo__instagram">
-                        <form>
+                        <form action="procesar_iniciar_sesion.php" method="POST">
+                            
                             <input type="text" id="correo" name="correo" class="formulario-input" placeholder="Teléfono, Usuario o Correo Electrónico"><br><br>
                            
-                            <input type="password" id="contrasena" name="contrasena" class="formulario-input" placeholder="Contraseña"><br><br>                         
+                            <input type="password" id="contrasena" name="contrasena" class="formulario-input" placeholder="Contraseña"><br><br>
+                            
+                            <button class="formulario-submit" id="iniciarSesion">Iniciar Sesión</button>
+                           
                         </form>
-
-                        <a href="/Main/Main-instagram/Rama Gaby/Instagram/index.html"><button class="formulario-submit">Iniciar seccion</button></a>
 
                         <div class="separador">
                             <img src="/Main/Login/proyecto/separador.png" alt="">
@@ -141,6 +143,7 @@
                     <p>© 2023 Instagram from Meta</p>
                 </div>
         </section>
+
     </footer>
 </body>
 </html>
