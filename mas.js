@@ -17,4 +17,12 @@ closeBtnCambiar.addEventListener("click", () => {
   cambiarContainer.classList.remove("active");
 });
 
-/*Seguir*/
+//menu guardar
+const guardarContainer = document.querySelector(".menu_guardar");
+const guardar = document.querySelector(".save");
+
+guardar.addEventListener("click", () => {
+  guardarContainer.classList.toggle("activar");
+});
+
+//menu enviar

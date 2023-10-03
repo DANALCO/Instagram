@@ -15,8 +15,9 @@ likeBottomPosts.forEach((likeBottomPost) => {
   });
 });
 
-const saveBottomPosts = document.querySelectorAll(".posts .bottoms .save");
+/*Guardar post*/
 
+const saveBottomPosts = document.querySelectorAll(".posts .bottoms .save");
 saveBottomPosts.forEach((saveBottomPost) => {
   saveBottomPost.addEventListener("click", () => {
     const save = saveBottomPost.querySelector("svg");
@@ -30,8 +31,7 @@ saveBottomPosts.forEach((saveBottomPost) => {
   });
 });
 
-/*Buscar */
-// Selecciona el elemento div por su ID
+/*Buscar aside */
 const buscarDiv = document.getElementById("buscar-div");
 
 // Inicializa una variable para rastrear el estado del botón
@@ -55,7 +55,7 @@ buscarDiv.addEventListener("click", function () {
   isStrokeIncreased = !isStrokeIncreased;
 });
 
-/*Seguir*/
+/*Seguir aside derecho*/
 document.addEventListener("DOMContentLoaded", function () {
   var botonesSeguir = document.querySelectorAll(".btn-seguir");
   botonesSeguir.forEach(function (botonSeguir) {
@@ -75,4 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
       activado = !activado;
     });
   });
+});
+
+/*Menu buscar*/
+const buscarContainer = document.querySelector(".menu_buscar");
+const buscar = document.querySelector(".buscar");
+
+buscar.addEventListener("click", () => {
+  buscarContainer.classList.toggle("activado");
 });

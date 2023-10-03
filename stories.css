@@ -1,7 +1,7 @@
 .stories-container {
   display: flex;
   background: #ffffff;
-  width: auto;
+  width: 706px;
   padding: 20px 36px;
   border-radius: 8px;
   gap: 25px;
@@ -154,4 +154,44 @@
   .story-full .content img {
     height: 65%;
   }
+}
+
+.nombre_stories {
+  margin-top: -20px;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+.user_one {
+  margin-left: 25px;
+}
+
+.user_two {
+  margin-left: 25px;
+}
+
+.user_three {
+  margin-left: 20px;
+}
+
+.user_four {
+  margin-left: 25px;
+}
+
+.user_five {
+  margin-left: 25px;
+}
+
+.user_six {
+  margin-left: 15px;
+}
+
+.user_seven {
+  margin-left: 19px;
+}
+
+.user_eight {
+  margin-left: 25px;
 }
