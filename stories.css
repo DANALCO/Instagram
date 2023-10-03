@@ -1,8 +1,13 @@
 .stories-container {
   display: flex;
   background: #ffffff;
+<<<<<<< HEAD
   width: 706px;
   padding: 20px 36px;
+=======
+  width: auto;
+  padding: 20px 90px;
+>>>>>>> df992aaeadc37a49ce1c57282f450418c469e942
   border-radius: 8px;
   gap: 25px;
   overflow: hidden;
