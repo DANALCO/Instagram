@@ -1,24 +1,32 @@
+// Obtén una referencia al video
 const video = document.querySelector('.myVideo');
+
+// Obtén una referencia a los elementos relacionados con el audio
 const muteButton = document.querySelector('.mute-button');
-const mute = document.querySelector('.mute')
+const mute = document.querySelector('.mute');
+
+// Obtén una referencia al botón de pausa
 const pausa = document.querySelector('.pausa');
 let videoPaused = false;
 
+// Función para mutear o desmutear el video
 function Mutear() {
     if (video.muted) {
         video.muted = false;
-        mute.src = "../assets/iconos/audio-on.png";
+        mute.src = "../assets/iconos/audio-on white.png";
     } else {
         video.muted = true;
-        mute.src = "../assets/iconos/audio-off.png";
+        mute.src = "../assets/iconos/audio-off white.png";
     }
 }
 
+// Obtén una referencia al botón para mostrar/ocultar pausa
 const mostrarBtn = document.querySelector('.mostrarBtn');
 
+// Agrega un controlador de clic al botón para mostrar/ocultar pausa
 mostrarBtn.addEventListener('click', () => {
     if (pausa.classList.contains('oculto')) {
-        // Mostrar imagen
+        // Mostrar la imagen de pausa
         pausa.classList.remove('oculto');
         pausa.classList.remove('desaparecer'); // Quitar la clase de desaparición si estaba presente
         pausa.classList.add('visible');
@@ -27,7 +35,7 @@ mostrarBtn.addEventListener('click', () => {
             videoPaused = true;
         }
     } else {
-        // Ocultar imagen con animación de desaparición
+        // Ocultar la imagen de pausa con animación de desaparición
         pausa.classList.remove('visible');
         pausa.classList.add('desaparecer');
         if (videoPaused) {
@@ -42,9 +50,10 @@ mostrarBtn.addEventListener('click', () => {
     }
 });
 
+// Agrega un controlador de clic a la imagen de pausa para mostrar/ocultar pausa
 pausa.addEventListener('click', () => {
     if (pausa.classList.contains('oculto')) {
-        // Mostrar imagen
+        // Mostrar la imagen de pausa
         pausa.classList.remove('oculto');
         pausa.classList.remove('desaparecer'); // Quitar la clase de desaparición si estaba presente
         pausa.classList.add('visible');
@@ -53,7 +62,7 @@ pausa.addEventListener('click', () => {
             videoPaused = true;
         }
     } else {
-        // Ocultar imagen con animación de desaparición
+        // Ocultar la imagen de pausa con animación de desaparición
         pausa.classList.remove('visible');
         pausa.classList.add('desaparecer');
         if (videoPaused) {
@@ -67,16 +76,17 @@ pausa.addEventListener('click', () => {
         }, 500); // La duración de la animación de desaparición es de 0.5 segundos
     }
 });
-// Variable para rastrear el estado actual del corazon
+
+// Variable para rastrear el estado actual del corazón
 let imagenActual = 1;
 
-// Función para cambiar corazon y aplicar la animación
+// Función para cambiar la imagen del corazón y aplicar la animación
 function cambiarImagen() {
     const corazon = document.querySelector(".corazon");
 
     // Cambia la imagen y el estado actual
     if (imagenActual === 1) {
-        corazon.src = "../assets/iconos/heart black.png";
+        corazon.src = "../assets/iconos/heart red.png";
         imagenActual = 2;
 
         // Aplica la animación "palpitar"
@@ -90,7 +100,7 @@ function cambiarImagen() {
     }
 }
 
-// Función para manejar el evento mouseout
+// Función para manejar el evento mouseout del corazón
 function onMouseOut() {
     if (imagenActual === 1) {
         const corazon = document.querySelector(".corazon");
@@ -107,6 +117,7 @@ const corazon = document.querySelector(".corazon");
 corazon.addEventListener("click", cambiarImagen);
 corazon.addEventListener("mouseout", onMouseOut);
 
+// Función para habilitar o deshabilitar el botón de publicar comentario
 function commentButton() {
     const commentInput = document.querySelector(".comment-input");
     const publishButton = document.querySelector(".publish-button");
@@ -118,6 +129,7 @@ function commentButton() {
     }
 }
 
+// Función para agregar comentarios
 function addComment() {
     const commentInput = document.querySelector(".comment-input");
     const commentText = commentInput.value.trim();
@@ -131,15 +143,24 @@ function addComment() {
         commentButton();
     }
 }
+
+// Variable para rastrear la visibilidad de los comentarios
 let commentsVisible = false;
 
+// Función para mostrar u ocultar los comentarios
 function toggleComments() {
     const commentsContainer = document.querySelector(".comments-container");
-    
+
     commentsVisible = !commentsVisible;
 
     if (commentsVisible) {
         commentsContainer.style.display = "block";
+        if (shareVisible){
+            toggleShare()
+        }
+        if (moreVisible){
+            toggleMore()
+        }
         // No mostramos emoji-container aquí
     } else {
         commentsContainer.style.display = "none";
@@ -150,18 +171,10 @@ function toggleComments() {
     }
 }
 
-function closeComments() {
-    const commentsContainer = document.querySelector(".comments-container");
-    commentsVisible = !commentsVisible;
-    commentsContainer.style.display = "none";
-    document.querySelector(".emoji-container").style.display = "none"; // Ocultar emoji-container
-    if (emojiContainerVisible){
-        emojiContainerVisible = !emojiContainerVisible;
-    }
-}
-
+// Variable para rastrear la visibilidad del emoji-container
 let emojiContainerVisible = false;
 
+// Función para mostrar u ocultar el emoji-container
 function emojiButtonClick() {
     if (commentsVisible) {
         const emojiContainer = document.querySelector(".emoji-container");
@@ -174,29 +187,33 @@ function emojiButtonClick() {
         }
     }
 }
+
+// Variable para rastrear la visibilidad de "share"
 let shareVisible = false;
 
+// Función para mostrar u ocultar "share"
 function toggleShare() {
     const shareContainer = document.querySelector(".share-container");
-    
+
     shareVisible = !shareVisible;
 
     if (shareVisible) {
         shareContainer.style.display = "block";
+        if (commentsVisible){
+            toggleComments()
+        }
+        if (moreVisible){
+            toggleMore()
+        }
     } else {
         shareContainer.style.display = "none";
     }
 }
 
-function closeShare() {
-    const shareContainer = document.querySelector(".share-container");
-    shareVisible = !shareVisible;
-    shareContainer.style.display = "none";
-}
-// Variable para rastrear el estado actual de la imagen
+// Variable para rastrear el estado actual de la imagen de guardar
 let guardarActual = 1;
 
-// Función para cambiar corazon y aplicar la animación
+// Función para cambiar la imagen de guardar y su estado
 function cambiarGuardado() {
     const guardar = document.querySelector(".guardar");
 
@@ -209,33 +226,44 @@ function cambiarGuardado() {
         guardarActual = 1;
     }
 }
+
+// Agrega un controlador de clic a la imagen de guardar
 const guardar = document.querySelector(".guardar");
 guardar.addEventListener("click", cambiarGuardado);
 
+// Variable para rastrear la visibilidad de "more"
 let moreVisible = false;
 
+// Función para mostrar u ocultar "more"
 function toggleMore() {
     const moreContainer = document.querySelector(".more-container");
-    
+
     moreVisible = !moreVisible;
 
     if (moreVisible) {
         moreContainer.style.display = "block";
+        if (commentsVisible){
+            toggleComments()
+        }
+        if (shareVisible){
+            toggleShare()
+        }
     } else {
         moreContainer.style.display = "none";
     }
 }
-// Obtén el botón por su ID
+
+// Obtén una referencia al botón de seguir
 const seguirBoton = document.querySelector('.seguirBoton');
 
-// Agrega un evento click al botón
+// Agrega un evento click al botón de seguir
 seguirBoton.addEventListener('click', function() {
     // Verifica el texto actual del botón
     if (seguirBoton.textContent === '. Seguir') {
-        // Si el texto es 'xd', cámbialo a 'a'
+        // Si el texto es '. Seguir', cámbialo a '. Siguiendo'
         seguirBoton.textContent = '. Siguiendo';
     } else {
-        // Si el texto no es 'xd', cámbialo nuevamente a 'xd'
+        // Si el texto no es '. Siguiendo', cámbialo nuevamente a '. Seguir'
         seguirBoton.textContent = '. Seguir';
     }
 });

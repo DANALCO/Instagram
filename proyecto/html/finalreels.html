@@ -12,22 +12,22 @@
         <div class="vid">
             <video class="mostrarBtn myVideo" src="../assets/videos/video2.mp4" autoplay muted loop></video>
             <img src="../assets/iconos/play.png" width="80px" alt="Imagen" class="oculto pausa">
-            <div class="mute-button" onclick="Mutear()"><img src="../assets/iconos/audio-off.png" width="20px" class="mute" alt="Botón Mute"></div>
+            <div class="mute-button" onclick="Mutear()"><img src="../assets/iconos/audio-off white.png" width="20px" class="mute" alt="Botón Mute"></div>
             <div class="seguir"><button><div class="perfil-circulo"><img src="../assets/perfil/perfil5.jpg" width="40px"></div></button><button style="font-weight: bold;">Perfil 5</button><button class="seguirBoton" style="font-weight: bold;">. Seguir</button></div>
             <div class="adicional">Me Muero De La Risa Ja Ja Ja</div>
-            <div class="musica"><img src="../assets/iconos/musical-note.png" width="12px">Audio 1</div>
+            <div class="musica"><img src="../assets/iconos/musical-note white.png" width="12px">Audio 1</div>
         </div>
         <div class="bar">
             <button><img src="../assets/iconos/heart.png" class="corazon" width="25px" alt="Botón 1"><p>5</p></button>
-            <button onclick="toggleComments()"><img src="../assets/iconos/messenger.png" width="25px" alt="Botón 2"><p>0</p></button>
-            <button><img src="../assets/iconos/send.png" onclick="toggleShare()" width="25px" alt="Botón 3"></button>
+            <button onclick="toggleComments()"><img src="../assets/iconos/comments.png" width="25px" alt="Botón 2"><p>0</p></button>
+            <button onclick="toggleShare()"><img src="../assets/iconos/send.png" width="25px" alt="Botón 3"></button>
             <button><img src="../assets/iconos/bookmark.png" class="guardar" width="25px" alt="Botón 4"></button>
             <button onclick="toggleMore()"><img src="../assets/iconos/more.png" width="25px" alt="Botón 5"></button>
             <button><div class="perfil"><img src="../assets/perfil/perfil5.jpg" width="25px" alt="Botón 6"></div></button>
         </div>
         <div class="comments-container">
             <div class="titulo">
-              <button onclick="closeComments()">X</button>
+              <button onclick="toggleComments()">X</button>
               <h2>Comentarios</h2>
             </div>
             <div class="comments"></div>
@@ -44,10 +44,11 @@
             <div class="titulo">
                 <h2 style="color: #CCC;text-align: left;margin: 0;">Más populares</h2>
             </div>
+          </div>
         </div>
         <div class="share-container">
             <div class="titulo">
-                <button onclick="closeShare()">X</button>
+                <button onclick="toggleShare()">X</button>
                 <h2>Compartir</h2>
             </div>
             <div style="height: 12px;">

@@ -53,7 +53,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: gray;
+    background-color: rgba(150, 150, 150, 0.5);
     border-radius: 50%; /* Para hacerlo circular */
     width: 30px;
     height: 30px;
@@ -78,7 +78,6 @@
     display: block;
     animation: desaparecer 0.5s forwards;
 }
-/* Estilos CSS para la imagen */
 .corazon {
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -88,15 +87,14 @@ button {
     background-color: white;
 }
 .buttom:hover {
-    /* Establece el efecto de hover para todo el contenido */
     opacity: 0.5;
 }
 
-/* Estilos CSS para el párrafo */
 button p {
-    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    margin: 0;
 }
 .comments-container {
+    background-color: white;
     position: absolute;
     left: 530px;
     top: 140px;
@@ -193,8 +191,6 @@ button p {
     max-height: 100%;
     border-radius: 50%;
 }
-
-/* Estilos para el contenedor adicional */
 .emoji-container {
     position: absolute;
     left: 725px;
@@ -223,8 +219,10 @@ button p {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 2;
+    background-color: white;
 }
 .more-container {
+    background-color: white;
     position: absolute;
     left: 530px;
     top: 450px;
@@ -247,7 +245,6 @@ button p {
 .more-container button:hover{
     background-color: #CCC;
 }
-/* Estilos CSS para la imagen */
 .guardar {
     cursor: pointer;
 }
