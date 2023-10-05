@@ -14,9 +14,9 @@
 </head>
 <body>
     <div class="aside">
-        <img class="logo" src="/Main/Main-instagram/Rama Gaby/Instagram/img/instagram-logo-vector.png" width="103px" />
+        <img class="logo" src="/Main/Main-instagram/Rama Gaby/img/instagram-logo-vector.png" width="103px" />
         <div class="contendor_op">
-            <a href="/Main/Main-instagram/Rama Gaby/Instagram/index.html">
+            <a href="/Main/Main-instagram/Rama Gaby/index.html">
           <div class="inicio" id="inicio-div">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +100,7 @@
           </div>
              </a>
 
+             <a href="/Main/Main-instagram/proyecto/html/reels.html">
           <div class="reels">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +123,9 @@
             </svg>
             Reels
           </div>
+         </a>
 
+         <a href="/Main/Main-instagram/proyecto nicolas/index.html">
           <div class="mensajes">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -143,6 +146,7 @@
             </svg>
             Mensajes
           </div>
+        </a>
 
           <div class="notificaciones">
             <svg
@@ -190,7 +194,7 @@
 
           <div class="perfil_menu">
             <img
-              src="/Main/Main-instagram/Rama Gaby/Instagram/img/fotos_perfil/perfil1.jpg"
+              src="/Main/Main-instagram/Rama Gaby/img/fotos_perfil/perfil1.jpg"
               width="25"
               height="25"
               style="
@@ -818,6 +822,14 @@
         </div>
     </div>
     <script src="../java/explore.js"></script>  
+    <script>
+    const masContainer = document.querySelector(".menu_mas");
+      const mas = document.querySelector(".mas");
+      
+      mas.addEventListener("click", () => {
+        masContainer.classList.toggle("actives");
+      });
+      </script>
     <script src="/Main/Main-instagram/Rama Gaby/Instagram/post.js"></script>
 </body>
 </html>
