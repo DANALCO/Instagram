@@ -1,5 +1,7 @@
 /* Estilo para el contenedor principal "cont-video" */
 .cont-video {
+    position: absolute;
+   left: 650px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
