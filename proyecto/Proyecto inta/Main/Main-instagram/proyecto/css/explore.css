@@ -1,3 +1,8 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+}
+
 .contenedor{
   display: flex;
   justify-content: center;
@@ -329,6 +334,7 @@
 .barra__navegacion {
   color: rgb(115, 115, 115);
   font-size: 14px;
+  margin-left: 240px;
 }
 
 .barra__navegacion ul {

@@ -4,6 +4,8 @@
     width: 60%;
     padding: 20px 0px;
     margin-left: 265px;
+    overflow: hidden;
+    
   }
   
   .logo {
@@ -13,6 +15,7 @@
   }
   
   .aside {
+    overflow: visible;
     position: fixed;
     margin-top: 0;
     padding-right: 5px;
@@ -115,7 +118,7 @@
   }
   
   .menu_buscar {
-    position: relative;
+    position: absolute;
     border: none;
     display: flex;
     flex-direction: column;
