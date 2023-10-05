@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    .oscuridad{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100000px;
+      height: 1000000px;
+      background-color: black;
+      z-index: 995;
+      opacity: 0.5;
+      display: none;
+    }
+    .problema{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 390px;
+      height: 310px;
+      background-color: white;
+      margin: 0 auto;
+      border-radius: 10px;
+      z-index: 999;
+      overflow: hidden;
+    }
+    .tittlee {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: white;
+      color: black;
+      height: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .tittlee button {
+      background-color: transparent;
+      border: none;
+      color: black;
+      font-size: 20px;
+      cursor: pointer;
+      width: 5px;
+    }
+    .tittlee h2 {
+      position: relative;
+      right: 0px;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .enviarProblema{
+      background-color: #0095f6;
+      color: white;
+      font-size: 13px;
+      height: 30px;
+      margin: 0 0 0 18px;
+      width: 120px;
+      border-radius: 7px;
+      border: none;
+      opacity: 0.5;
+    }
+    .archivoBoton{
+      color: black;
+      background-color: #dcdcdc;
+      height: 30px;
+      font-size: 13px;
+      width: 120px;
+      border-radius: 7px;
+      border: none;
+      margin: 0 0 0 115px;
+      cursor: pointer;
+    }
+    .archivoBoton:hover{
+      filter: brightness(90%);
+    }
+    .enviarProblema:hover{
+      filter: brightness(90%);
+    }
+    .cambioCuenta{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 390px;
+      height: 415px;
+      background-color: white;
+      margin: 0 auto;
+      border-radius: 10px;
+      z-index: 999;
+      overflow: hidden;
+    }
+    .reinicioCuenta{
+      background-color: #0095f6;
+      color: white;
+      font-size: 13px;
+      height: 30px;
+      margin: 18px 0 0 70px;
+      width: 250px;
+      border-radius: 7px;
+      border: none;
+      opacity: 0.5;
+    }
+    .reinicioCuenta:disabled {
+      /* Estilo cuando el botón está deshabilitado */
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .cambioContraseña{
+      background-color: transparent;
+      color: #0095f6;
+      font-size: 13px;
+      height: 30px;
+      margin: 18px 0 0 70px;
+      width: 250px;
+      border-radius: 7px;
+      border: none;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+    .cambioAspecto{
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      width: 280px;
+      height: 115px;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    .modoOscuro{
+      background-color: white;
+      width: 250px;
+      height: 45px;
+      margin: 10px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 18px;
+      border: none;
+    }
+    .modoOscuro:hover{
+      background-color: #ccc;
+    }
+    .crear{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 720px;
+      height: 750px;
+      background-color: white;
+      margin: 0 auto;
+      border-radius: 10px;
+      z-index: 999;
+      overflow: hidden;
+    }
+    .seleccionarArchivo{
+      background-color: #0095f6;
+      color: white;
+      font-size: 13px;
+      height: 38px;
+      margin: 18px 0 0 230px;
+      width: 250px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+    }
+    .seleccionarArchivo:hover{
+      filter: brightness(90%);
+    }
+  </style>
+</head>
+<body>
+  <!--desde aqui-->
+  <button onclick="toggleProblem()">Problema</button>
+  <button onclick="toggleCambioCuenta()">Cambia cuentas</button>
+  <button onclick="toggleAspecto()">aspecto</button>
+  <button onclick="toggleCrear()">Crear</button>
+  <!--hasta aqui lo borra, son solo botones de prueba para verificar el funcionamiento de los divs, simplemente coloque la funcion de los botones en sus respectivos lugares y deberia funcionar-->
+  <!--nota: tiene que ajustar la posicion del recuadro de cambiar aspecto-->
+  <!--este es el menu de informar problema-->
+    <div class="problema">
+      <div class="tittlee">
+          <h2>Informar de un problema</h2>
+          <button class="salirProblema" style="position: absolute;right: 25px;">X</button>
+      </div>
+      <div style="margin: 15px 16px;"><textarea cols="40" rows="3" id="textoProblema" style="width: 355px;border: 1px #ccc solid;height: 140px;font-size: 15px;" placeholder="Incluye toda la información posible..."></textarea></div>
+      <div style="margin: 0 0 15px 0;"><button class="enviarProblema" id="enviarProblema">Enviar informe</button><button class="archivoBoton">Añadir archivo</button></div>      
+      <div style="opacity: 0.6;font-size: 13px;padding: 0 15px;">Tu nombre de usuario de Instagram y la información del navegador se incluirán automáticamente en el informe.</div>
+    </div>
+    <!--este es el menu de cambio de cuenta-->
+    <div class="cambioCuenta">
+      <div class="tittlee" style="height: 40px;border-bottom: none;">
+        <button class="salirCambioCuenta" style="position: absolute;right: 25px;">X</button>
+      </div>
+      <div><img src="../assets/iconos/instagram-logo-vector.png" width="180px" style="margin: 20px 115px 30px 110px;"></div>
+      <div style="padding: 0 50px 0 70px;">
+        <input type="text" id="inputUsuario" placeholder=" Teléfono, usuario o correo electrónico" style="width: 245px;height: 30px;border: solid 1px rgb(134, 133, 133);border-radius: 5px;background-color: rgb(236, 236, 236);" maxlength="300" required>
+        <input type="password" id="inputContraseña" placeholder="Contraseña" style="margin: 10px 0 0 0;width: 245px;height: 30px;border: solid 1px rgb(134, 133, 133);border-radius: 5px;background-color: rgb(236, 236, 236);" required>
+      </div>
+      <div style="margin: 14px 0 0 68px;">
+        <input type="checkbox" name="dto1"><label style="font-size: 14px;"> Guardar datos de inicio de sesión</label>
+      </div>
+      <div>
+        <button class="reinicioCuenta" id="reinicioCuenta">Entrar</button>
+        <button class="cambioContraseña" id="olvideContraseña">¿Has olvidado la contraseña</button>
+      </div>
+    </div>
+    <!--este es el menu de cambio de aspecto-->
+    <div class="cambioAspecto">
+      <div class="tittlee" style="height: 28px;">
+        <button class="salirCambioAspecto" style="position: absolute;left: 13px;opacity: 0.5;"><</button>
+        <h2 style="margin: 0 0 0 35px;opacity: 0.8;">Cambiar aspecto</h2>
+        <img src="../assets/iconos/sun.png" width="18px" style="position: absolute;right: 15px;">
+      </div>
+      <div class="modoOscuro"><div style="padding: 10px 0 0 10px;">Modo oscuro</div><img src="../assets/iconos/boton largo.png" width="35px" style="position: relative;left: 205px;bottom: 23px;"></div>
+    </div>
+    <!--este es el menu de crear-->
+    <div class="crear">
+      <div class="tittlee">
+        <h2>Crear nueva publicación</h2>
+      </div>
+      <div>
+        <img src="../assets/iconos/crear.png" style="margin: 300px 0 0 300px;">
+        <p style="font-size: 28px;margin: 0 0 0 160px;">Arrastra las fotos y los vídeos aquí</p>
+      </div>
+      <button class="seleccionarArchivo">Seleccionar del ordenador</button>
+    </div>
+    <!--el div oscuridad afecta tanto a informe problema como a cambio de cuenta-->
+    <div class="oscuridad"></div>
+  <script>
+    let problemaVisible = false;
+    const oscuridad = document.querySelector('.oscuridad');
+    const problema = document.querySelector('.problema');
+
+    // Función para mostrar u ocultar "problema"
+    function toggleProblem() {
+      problemaVisible = !problemaVisible;
+
+      if (problemaVisible) {
+        oscuridad.style.display = "flex";
+        problema.style.display = "block";
+      } else {
+        oscuridad.style.display = "none";
+        problema.style.display = "none";
+      }
+    }
+
+    // Obtener el elemento del textarea y el botón "Enviar informe"
+    const textarea = document.getElementById('textoProblema');
+    const enviarBoton = document.getElementById('enviarProblema');
+    
+    // Agregar un event listener para controlar la opacidad y el cursor
+    textarea.addEventListener('input', function () {
+      if (textarea.value.trim() === '') {
+        // Si el textarea está vacío, disminuir la opacidad y cambiar el cursor
+        enviarBoton.style.opacity = '0.5';
+        enviarBoton.style.cursor = '';
+      } else {
+        // Si hay texto en el textarea, restaurar la opacidad y el cursor
+        enviarBoton.style.opacity = '1';
+        enviarBoton.style.cursor = 'pointer';
+      }
+    });
+    
+    // Obtener los elementos de entrada y el botón "Entrar"
+    const inputUsuario = document.getElementById('inputUsuario');
+    const inputContraseña = document.getElementById('inputContraseña');
+    const reinicioCuentaBoton = document.getElementById('reinicioCuenta');
+
+    // Agregar un event listener para verificar los campos de entrada
+    inputUsuario.addEventListener('input', checkCampos);
+    inputContraseña.addEventListener('input', checkCampos);
+
+    const cambioCuenta = document.querySelector('.cambioCuenta');
+    let cambioCuentaVisible = false;
+    // Función para mostrar u ocultar "problema"
+    function toggleCambioCuenta() {
+      cambioCuentaVisible = !cambioCuentaVisible;
+
+      if (cambioCuentaVisible) {
+        oscuridad.style.display = "flex";
+        cambioCuenta.style.display = "block";
+      } else {
+        oscuridad.style.display = "none";
+        cambioCuenta.style.display = "none";
+      }
+    }
+    const crear = document.querySelector('.crear');
+    let crearVisible = false;
+    // Función para mostrar u ocultar "problema"
+    function toggleCrear() {
+      crearVisible = !crearVisible;
+
+      if (crearVisible) {
+        oscuridad.style.display = "flex";
+        crear.style.display = "block";
+      } else {
+        oscuridad.style.display = "none";
+        crear.style.display = "none";
+      }
+    }
+    //cambio de aspecto funcion
+    const cambioAspecto = document.querySelector('.cambioAspecto');
+    let cambioAspectoVisible = false;
+    // Función para mostrar u ocultar "cambioAspecto"
+    function toggleAspecto() {
+      cambioAspectoVisible = !cambioAspectoVisible;
+
+      if (cambioAspectoVisible) {
+        cambioAspecto.style.display = "block";
+      } else {
+        cambioAspecto.style.display = "none";
+      }
+    }
+    function checkCampos() {
+      if (inputUsuario.value.trim() !== '' && inputContraseña.value.trim() !== '') {
+        // Si ambos campos no están vacíos, habilitar el botón
+        reinicioCuentaBoton.removeAttribute('disabled');
+        reinicioCuentaBoton.style.cursor = 'pointer';
+        reinicioCuentaBoton.style.opacity = '1';
+      } else {
+        // Si alguno de los campos está vacío, deshabilitar el botón
+        reinicioCuentaBoton.setAttribute('disabled', 'true');
+        reinicioCuentaBoton.style.opacity = '0.5';
+      }
+    }
+    //controladores de clic a los botones para cerrar "problema", "cambioCuenta" y "cambioAspecto"
+    const cerrarProblema = document.querySelector(".salirProblema");
+    const cerrarCambioCuenta = document.querySelector(".salirCambioCuenta");
+    const cerrarCambioAspecto = document.querySelector(".salirCambioAspecto");
+
+    cerrarProblema.addEventListener("click", toggleProblem);
+    cerrarCambioCuenta.addEventListener("click", toggleCambioCuenta);
+    cerrarCambioAspecto.addEventListener("click", toggleAspecto);
+    // Agrega un controlador de clic a la división oscuridad para ocultar "problema" o "cambioCuenta"
+    oscuridad.addEventListener('click', () => {
+      if (problemaVisible) {
+        toggleProblem();
+      } 
+      if (cambioCuentaVisible) {
+        toggleCambioCuenta();
+      } 
+      if (crearVisible) {
+        toggleCrear();
+      } 
+    });
+    const botonCambioContraseña = document.getElementById("olvideContraseña");
+    // Agregar un evento clic al botón "¿No puedes cambiar la contraseña?"
+    botonCambioContraseña.addEventListener("click", function () {
+      window.location.href="../html/resetPassword.html";
+    });
+  </script>
+</body>
+</html>  

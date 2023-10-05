@@ -1,11 +1,14 @@
 /*Aside*/
 
+a{
+  text-decoration: none;
+  color: black;
+}
 .body {
     width: 60%;
     padding: 20px 0px;
     margin-left: 265px;
     overflow: hidden;
-    
   }
   
   .logo {
@@ -16,7 +19,7 @@
   
   .aside {
     overflow: visible;
-    position: fixed;
+    position: absolute;
     margin-top: 0;
     padding-right: 5px;
     height: 100vh;

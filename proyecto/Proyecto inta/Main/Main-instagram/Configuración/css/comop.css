@@ -1,0 +1,41 @@
+ul{
+    list-style-type: none;
+    padding: 0%;
+    margin: auto;
+}
+
+izq{
+    white-space: 30%;
+    padding: 0;
+    margin: 0;
+}
+.f{
+    background-color: #373737;
+}
+
+.c{
+    background-color:#373737;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    width: 30%;
+}
+
+.menu li{
+    padding: 12px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: black;
+    color: #f2f3f5;
+}
+
+h5{
+    color: #828285;
+}

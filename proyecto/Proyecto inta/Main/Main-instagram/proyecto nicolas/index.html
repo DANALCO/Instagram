@@ -46,8 +46,7 @@
           </a>
           </div>
 
-          <div class="buscar" id="buscar-div">
-            <a href="/Main/Main-instagram/Rama Gaby/index.html">
+          <div class="buscar" id="buscar-div">          
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-search"
@@ -65,7 +64,23 @@
               <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
               <path d="M21 21l-6 -6" />
             </svg>
-          </a>
+            
+          </div>
+
+          <div class="menu_buscar activado">
+            <div class="buscar_up">
+              <div class="ref_buscar">
+                <b>Buscar</b>
+              </div>
+              <div class="buscador">
+                <input type="text" placeholder="Buscar" />
+              </div>
+            </div>
+
+            <div class="buscar_down">
+              <div class="recientes">Recientes</div>
+              <div class="borrar">Borrar todo</div>
+            </div>
           </div>
           <div class="explorar">
             <a href="/Main/Main-instagram/proyecto/html/explore.html">
@@ -207,11 +222,11 @@
           </div>
 
           <script>
-            const buscarContainer = document.querySelector(".menu_not");
-            const buscar = document.querySelector(".notificaciones");
+            const notificacionContainer = document.querySelector(".menu_not");
+            const notificacion = document.querySelector(".notificaciones");
 
-            buscar.addEventListener("click", () => {
-              buscarContainer.classList.toggle("activado");
+            notificacion.addEventListener("click", () => {
+              notificacionContainer.classList.toggle("activado");
             });
           </script>
 
@@ -237,6 +252,7 @@
             
           </div>
 
+          <a href="/Main/Main-instagram/proyecto juan pablo/perfil.html">
           <div class="perfil_menu">
             <img
               src="./img/fotos_perfil/perfil1.jpg"
@@ -248,7 +264,7 @@
                 margin-bottom: -5px;
               "
             />
-            
+          </a>
           </div>
         </div>
 
@@ -454,6 +470,14 @@
   </div>
       </div>
     </main>
+    <script>
+      const buscarContainer = document.querySelector(".menu_buscar");
+      const buscar = document.querySelector(".buscar");
+      
+      buscar.addEventListener("click", () => {
+        buscarContainer.classList.toggle("activado"); 
+      });
+      </script>
     <script src="./js/mas.js"></script>
   </body>
 </html>

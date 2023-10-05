@@ -46,8 +46,7 @@
           </div>
         </a>
 
-          <div class="buscar" id="buscar-div">
-            <a href="/Main/Main-instagram/Rama Gaby/index.html">
+          <div class="buscar" id="buscar-div">          
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-search"
@@ -66,7 +65,6 @@
               <path d="M21 21l-6 -6" />
             </svg>
             Buscar
-          </a>
           </div>
 
           <div class="menu_buscar activado">
@@ -489,6 +487,14 @@
       });
       </script>
     
+    <script>
+      const buscarContainer = document.querySelector(".menu_buscar");
+      const buscar = document.querySelector(".buscar");
+      
+      buscar.addEventListener("click", () => {
+        buscarContainer.classList.toggle("activado"); 
+      });
+      </script>
     <script src="./stories.js"></script>
     <script src="./mas.js"></script>
     <script src="./post.js"></script>

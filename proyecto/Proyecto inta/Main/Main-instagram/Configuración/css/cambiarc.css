@@ -1,0 +1,119 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+  }
+  
+  main {
+    display: flex;
+    gap: 10px;
+  }
+  /*Aside*/
+  
+  .body {
+    width: 60%;
+    padding: 20px 0px;
+    margin-left: 265px;
+  }
+  
+  .logo {
+    margin-top: 29px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .aside {
+    position: fixed;
+    margin-top: 0;
+    width: 15%;
+    height: 100vh;
+    padding-right: 20px;
+    border-right: #d5dbdb 1px solid;
+  }
+  
+  .contendor_op {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 9px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contendor_op div {
+    position: relative;
+    padding: 16px 10px 18px 0px;
+    cursor: pointer;
+  }
+  
+  .contendor_op div:hover {
+    background-color: #f4f6f6;
+    border-radius: 15px;
+  }
+  
+  svg:hover {
+    margin: scale(1.1);
+  }
+  
+  .mas {
+    margin-top: 38px;
+    cursor: pointer;
+    margin: 100px 8px 10px 8px;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+  }
+  
+  .mas:hover {
+    background-color: #f4f6f6;
+    border-radius: 15px;
+  }
+  
+  /*Boton más*/
+  .menu_mas {
+    position: absolute;
+    font-weight: 600;
+    top: -369px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    height: 350px;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+  }
+  
+  .actives {
+    display: none;
+  }
+  
+  .ref_mas {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .ref_mas:hover {
+    background-color: #f4f6f6;
+    cursor: pointer;
+  }
+  
+  .menu_mas.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .down-table p {
+    padding: 15px;
+  }
+  
+  .down-table p:hover {
+    background-color: #f4f6f6;
+    border-radius: 5px;
+  }

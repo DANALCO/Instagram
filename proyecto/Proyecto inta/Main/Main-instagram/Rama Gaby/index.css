@@ -34,7 +34,7 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  margin-right: 58px;
+  margin-right: 130px;
 }
 
 .sugerencias {
@@ -49,6 +49,7 @@ main {
 }
 
 .perfil_sugerencias {
+  margin-right: 80px;
   display: flex;
   align-items: center;
   margin-top: 28px;

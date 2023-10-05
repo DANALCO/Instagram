@@ -36,7 +36,7 @@
       </div>
     </a>
 
-      <div class="buscar" id="buscar-div">
+      <div class="buscar" id="buscar-div">          
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-search"
@@ -145,6 +145,7 @@
     </a>
 
       <div class="notificaciones">
+        <a href="/Main/Main-instagram/proyecto nicolas/index.html">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-heart"
@@ -164,6 +165,7 @@
           />
         </svg>
         Notificaciones
+      </a>
       </div>
 
       <div class="crear">
@@ -188,6 +190,7 @@
         Crear
       </div>
 
+      <a href="/Main/Main-instagram/proyecto juan pablo/perfil.html">
       <div class="perfil_menu">
         <img
           src="/Main/Main-instagram/Rama Gaby/img/fotos_perfil/perfil1.jpg"
@@ -201,6 +204,7 @@
         />
         Perfil
       </div>
+      </a>
     </div>
 
     <!--Boton más-->
@@ -428,5 +432,13 @@
         masContainer.classList.toggle("actives");
       });
       </script>
+      <script>
+        const buscarContainer = document.querySelector(".menu_buscar");
+        const buscar = document.querySelector(".buscar");
+        
+        buscar.addEventListener("click", () => {
+          buscarContainer.classList.toggle("activado"); 
+        });
+        </script>
 </body>
 </html>
