@@ -1,0 +1,209 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: auto !important;
+    border-bottom: #d5dbdb 1px solid;
+}
+
+.logo__instagram img {
+    margin-left: 18%;
+    padding: 1% 0 0 1%;
+    width: 8%;
+    height: auto;
+}
+
+.container__Registrate {
+    max-width: 24%;
+    margin: 1% auto;
+    background-color: #fff;
+    border: #d5dbdb 1px solid;
+    text-align: center;
+}
+
+.logo__instagram {
+    padding: 2%;
+    padding: 4%;
+    max-width: 45%;
+    height: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+h1 {
+    color: #7b7d7d;
+    padding: 2%;
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+.button_iniciarfacebook{
+    cursor: pointer;
+    border: none;
+    margin-left: 12.5%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00aaff;
+    color: white !important;
+}
+
+.icono__facebook{
+    width: 7%;
+    border-radius: 25%;
+    background-color: white;
+    margin-top: 1%;
+    margin-right: 4%;
+    margin-bottom: 1%;
+}
+
+.separador img {
+    padding: 2% 2% 0 2%;
+    width: 90%;
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 0.1%;
+  }
+  
+  label {
+    display: none; /* Oculta las etiquetas */
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 75%;
+    padding: 3%;
+    margin-bottom: 1%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+.link_masinformacion{
+    color: #1460a6;
+    font-size: 0.8em;
+}
+  
+  /* Estilo para el botón de registro */
+  button {
+    margin-left: 13%;
+    display: block;
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 10%;
+    background-color: #00aaff; /* Cambia el color de fondo */
+    color: #fff; /* Cambia el color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Cambiar el color del botón al pasar el mouse sobre él */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    padding: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: #a4a7a7;
+    font-size: 0.85em;
+    margin-bottom: 1vw;
+}
+
+.Tienes__cuenta{
+    margin-top: -0.5em;
+}
+
+.Tienes__cuenta p {
+    color: black;
+    font-size: 0.8em;
+}
+
+.Tienes__cuenta a{
+    color: #0088cc;
+}
+
+.descargar__aplicacion {
+    width: auto !important;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+}
+
+.descargar__aplicacion p {
+    padding: 0;
+    font-size: 18px; 
+    color: #333; 
+    margin-bottom: 10px; 
+  } 
+
+
+.tiendas__aplicacion img {
+    padding: 10px;
+    width: 120px;
+}
+
+/* Estilos para la barra de navegación */
+.barra__navegacion {
+    color: rgb(115, 115, 115);
+    font-size: 0.8vw; 
+    margin-left: 15vw;
+}
+
+.barra__navegacion ul {
+    display: flex;
+}
+
+.barra__navegacion ul li {
+    padding: 0.5vw; 
+}
+
+/* Estilos para el cambio de idioma */
+.cambiar__idioma {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1vw; 
+    position: relative;
+}
+
+#botonIdiomas {
+    color: rgb(115, 115, 115);
+    font-size: 1vw; 
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Estilos para la lista de idiomas oculta */
+.oculto {
+    display: none;
+    font-size: 1vw; 
+    font-weight: 100;
+    position: absolute;
+    top: -49.5vw; 
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 15vw; 
+}
+
+.oculto li:hover {
+    background-color: rgb(66, 97, 236);
+    color: white;
+}
+
+/* Estilos para el pie de página */
+.p__footer {
+    color: rgb(115, 115, 115);
+}

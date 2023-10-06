@@ -1,0 +1,158 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: auto !important;
+    border-bottom: #d5dbdb 1px solid;
+}
+
+.logo__instagram img {
+    margin-left: 18%;
+    padding: 1% 0 0 1%;
+    width: 8%;
+    height: auto;
+}
+
+.container__olvidastecontraseña {
+    max-width: 27%;
+    margin: 3% auto;
+    background-color: #fff;
+    border: #d5dbdb 1px solid;
+    text-align: center;
+}
+
+.candado__img {
+    padding: 2%;
+    border: black 3px solid;
+    border-radius: 50%;
+    padding: 4%;
+    max-width: 20%;
+    height: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+h1 {
+    padding: 2%;
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+p {
+    padding: 2%;
+    color: #a4a7a7;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.formulario-input {
+    padding: 2%;
+    width: 90%;
+    padding: 0.7vw;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+}
+
+.formulario-submit {
+    padding: 2%;
+    width: 81%;
+    background-color: #0088cc;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.formulario-submit:hover {
+    padding: 2%;
+    background-color: #0055a5;
+}
+
+.Restablecercontraseña {
+    padding: 2%;
+    margin-top: 0.7vw;
+    color: #a4a7a7;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.separador img {
+    padding: 2% 2% 0 2%;
+    width: 90%;
+}
+
+.crear__cuenta{
+    padding: 2% 2% 10% 2%;
+    color: #464848;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.Volver_inicio{
+    cursor: pointer;
+    font-size: 1vw; 
+    border: 1px solid #d5dbdb;
+    padding: 2%;
+    background-color: #e6ecec;
+    width: 100%;
+}
+
+/* Estilos para la barra de navegación */
+.barra__navegacion {
+    color: rgb(115, 115, 115);
+    font-size: 1vw; 
+    margin-left: 10vw;
+}
+
+.barra__navegacion ul {
+    display: flex;
+}
+
+.barra__navegacion ul li {
+    padding: 0.5vw; 
+}
+
+/* Estilos para el cambio de idioma */
+.cambiar__idioma {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw; 
+    position: relative;
+}
+
+#botonIdiomas {
+    color: rgb(115, 115, 115);
+    font-size: 1vw; 
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Estilos para la lista de idiomas oculta */
+.oculto {
+    display: none;
+    font-size: 1vw; 
+    font-weight: 100;
+    position: absolute;
+    top: -28.3vw; 
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 15vw; 
+}
+
+.oculto li:hover {
+    background-color: rgb(66, 97, 236);
+    color: white;
+}
+
+/* Estilos para el pie de página */
+.p__footer {
+    color: rgb(115, 115, 115);
+}
