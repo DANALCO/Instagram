@@ -1,0 +1,208 @@
+/*Posts*/
+
+/*Post 1*/
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  margin-top: 35px;
+  margin-left: 15%;
+}
+
+.perfil_post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.username-post {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin: 8px 5px;
+  padding: 0;
+}
+
+.more {
+  margin-left: 57%;
+}
+
+.bottoms {
+  display: flex;
+  margin: 8px 5px;
+  cursor: pointer;
+}
+
+.save {
+  margin-left: 78%;
+}
+
+.description-post {
+  margin: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  padding: 0px 5px;
+}
+
+.description-post p {
+  margin: 4px 0px;
+}
+
+.description-post input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #d5dbdb;
+  padding: 0;
+  margin: 4px 0px;
+}
+
+/*Menu Guardar*/
+.menu_guardar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 234px;
+  height: 230px;
+  border-radius: 15px;
+  bottom: 15px;
+  left: 740px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.activar {
+  display: none;
+}
+
+.menu_guardar.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ref_guardar {
+  display: flex;
+  font-size: 18px;
+  font-weight: bolder;
+  align-items: center;
+  border-bottom: 1px solid #d5dbdb;
+  padding: 0px 5px;
+  justify-content: space-between;
+}
+
+.guardar_down {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px;
+}
+
+.comida {
+  display: flex;
+  align-items: center;
+}
+
+.comida img,
+.ejercicio img {
+  margin-right: 7px;
+  border-radius: 5px;
+}
+
+.ejercicio {
+  display: flex;
+  align-items: center;
+}
+
+.comida:hover,
+.ejercicio:hover {
+  background-color: #f4f6f6;
+  border-radius: 15px;
+}
+
+/*Menu enviar*/
+
+.menu_share {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 548px;
+  height: 430px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  bottom: 88px;
+  left: 370px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.activarr {
+  display: none;
+}
+
+.menu_share.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.buscar_up {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  align-items: center;
+}
+
+.buscar_up p {
+  margin-left: 214px;
+}
+
+.buscar_up svg {
+  margin-left: 185px;
+}
+
+.buscar_para {
+  display: flex;
+  border-bottom: 1px solid #d5dbdb;
+  padding: 0px 5px;
+}
+
+.buscar_para input {
+  margin-left: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+.buscar_destinatarios {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px;
+}
+
+.destinatario_uno,
+.destinatario_dos,
+.destinatario_tres {
+  display: flex;
+  justify-content: space-between;
+}
+
+.username-enviar {
+  display: flex;
+}
+
+.nickname {
+  display: flex;
+  flex-direction: column;
+  padding-top: -15px;
+}
+
+.comment {
+  display: flex;
+}
+
+.comment button {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #3498db;
+  font-weight: bold;
+  cursor: pointer;
+}

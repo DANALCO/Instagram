@@ -44,7 +44,7 @@ const allStories = [
   {
     thumbUrl: "img/fotos_perfil/perfil8.jpg",
     imageUrl: "img/stories/octavo.jpg",
-    title: "Titulo No.5",
+    title: "Responde a...",
   },
 ];
 

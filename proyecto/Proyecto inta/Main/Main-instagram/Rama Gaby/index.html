@@ -8,6 +8,7 @@
     <link href="./index.css" rel="stylesheet" />
     <link href="./stories.css" rel="stylesheet" />
     <link href="./botones.css" rel="stylesheet" />
+    <link href="./post.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -589,6 +590,84 @@
                 />
               </svg>
             </div>
+
+            <div class="menu_share activarr">
+              <div class="buscar_up">
+                <p><b>Compartir</b></p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M18 6l-12 12" />
+                  <path d="M6 6l12 12" />
+                </svg>
+              </div>
+
+              <div class="buscar_para">
+                <p><b>Para:</b></p>
+                <input type="text" placeholder="Buscar..." />
+              </div>
+
+              <div class="buscar_destinatarios">
+                <p><b>Sugerencias</b></p>
+                <nav class="destinatario_uno">
+                  <nav class="username-enviar">
+                    <img
+                    src="./img/fotos_perfil/perfil3.jpg"
+                    width="35"
+                    height="35"
+                    style="border-radius: 76px; padding-left: 5px; padding-right: 5px"
+                  />
+                  <nav class="nickname">
+                    <b>docMila</b>
+                    <p>XXXXXX</p>
+                  </nav>
+                  </nav>
+
+                  <input type="radio" value="check">
+                </nav>
+                <nav class="destinatario_dos">
+                  <nav class="username-enviar">
+                    <img
+                    src="./img/fotos_perfil/perfil3.jpg"
+                    width="35"
+                    height="35"
+                    style="border-radius: 76px; padding-left: 5px; padding-right: 5px"
+                    />
+                    <nav class="nickname">
+                      <b>docMila</b>
+                      <p>XXXXXX</p>
+                    </nav>
+                  </nav>
+                </nav>
+                <nav class="destinatario_tres">
+                  <nav class="username-enviar">
+                    <img
+                    src="./img/fotos_perfil/perfil3.jpg"
+                    width="35"
+                    height="35"
+                    style="border-radius: 76px; padding-left: 5px; padding-right: 5px"
+                    />
+                    <nav class="nickname">
+                      <b>docMila</b>
+                      <p>XXXXXX</p>
+                    </nav>
+                  </nav>
+                </nav>
+              </div>
+            </div>
+
+            <script>
+              const enviarContainer = document.querySelector(".menu_share");
+              const enviar = document.querySelector(".share");
+
+              enviar.addEventListener("click", () => {
+                enviarContainer.classList.toggle("activarr");
+              });
+
+              closeBtnEnviar.addEventListener("click", () => {
+                enviarContainer.classList.remove("active");
+              });
+            </script>
+
             <div class="save">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -631,13 +710,16 @@
                   </nav>
                 </div>
             </div>
-
           </div>
 
           <div class="description-post">
             <p><b>29 Me gusta</b></p>
             <p><b>lunaferrer</b></p>
-            <input type="text" placeholder="Agrega un comentario..." />
+            <div class="comment">
+              <input type="text" placeholder="Agrega un comentario..." class="comentario"/>
+              <button class="enviarComentario">Enviar</button>
+            </div>
+            <div class="contenedor"></div>
           </div>
         </div>
 
@@ -787,7 +869,11 @@
           <div class="description-post">
             <p><b>54 Me gusta</b></p>
             <p><b>dariotonetto</b></p>
-            <input type="text" placeholder="Agrega un comentario..." />
+            <div class="comment">
+              <input type="text" placeholder="Agrega un comentario..." class="comentario"/>
+              <button class="enviarComentario">Enviar</button>
+            </div>
+            <div class="contenedor"></div>
           </div>
         </div>
 
@@ -937,7 +1023,11 @@
           <div class="description-post">
             <p><b>14 Me gusta</b></p>
             <p><b>valent_gt</b></p>
-            <input type="text" placeholder="Agrega un comentario..." />
+            <div class="comment">
+              <input type="text" placeholder="Agrega un comentario..." class="comentario"/>
+              <button class="enviarComentario">Enviar</button>
+            </div>
+            <div class="contenedor"></div>
           </div>
         </div>
 
@@ -1088,7 +1178,11 @@
           <div class="description-post">
             <p><b>191 Me gusta</b></p>
             <p><b>camilo.b</b></p>
-            <input type="text" placeholder="Agrega un comentario..." />
+            <div class="comment">
+              <input type="text" placeholder="Agrega un comentario..." class="comentario"/>
+              <button class="enviarComentario">Enviar</button>
+            </div>
+            <div class="contenedor"></div>
           </div>
         </div>
 
@@ -1194,84 +1288,6 @@
               </svg>
             </div>
 
-            <div class="menu_share activarr">
-              <div class="buscar_up">
-                <p><b>Compartir</b></p>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M18 6l-12 12" />
-                  <path d="M6 6l12 12" />
-                </svg>
-              </div>
-
-              <div class="buscar_para">
-                <p><b>Para:</b></p>
-                <input type="text" placeholder="Buscar..." />
-              </div>
-
-              <div class="buscar_destinatarios">
-                <p><b>Sugerencias</b></p>
-                <nav class="destinatario_uno">
-                  <nav class="username-enviar">
-                    <img
-                    src="./img/fotos_perfil/perfil3.jpg"
-                    width="35"
-                    height="35"
-                    style="border-radius: 76px; padding-left: 5px; padding-right: 5px"
-                  />
-                  <nav class="nickname">
-                    <b>docMila</b>
-                    <p>XXXXXX</p>
-                  </nav>
-                  </nav>
-
-                  <input type="radio" value="check">
-                </nav>
-                <nav class="destinatario_dos">
-                  <nav class="username-enviar">
-                    <img
-                    src="./img/fotos_perfil/perfil3.jpg"
-                    width="35"
-                    height="35"
-                    style="border-radius: 76px; padding-left: 5px; padding-right: 5px"
-                    />
-                    <nav class="nickname">
-                      <b>docMila</b>
-                      <p>XXXXXX</p>
-                    </nav>
-                  </nav>
-                </nav>
-                <nav class="destinatario_tres">
-                  <nav class="username-enviar">
-                    <img
-                    src="./img/fotos_perfil/perfil3.jpg"
-                    width="35"
-                    height="35"
-                    style="border-radius: 76px; padding-left: 5px; padding-right: 5px"
-                    />
-                    <nav class="nickname">
-                      <b>docMila</b>
-                      <p>XXXXXX</p>
-                    </nav>
-                  </nav>
-                </nav>
-
-                <script>
-                const enviarContainer = document.querySelector(".menu_share");
-                const enviar = document.querySelector(".share");
-
-                enviar.addEventListener("click", () => {
-                  enviarContainer.classList.toggle("activarr");
-                });
-
-                closeBtnEnviar.addEventListener("click", () => {
-                  enviarContainer.classList.remove("active");
-                });
-                </script>
-
-              </div>
-            </div>
-
             <div class="save">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1319,7 +1335,11 @@
           <div class="description-post">
             <p><b>122 Me gusta</b></p>
             <p><b>docMila</b></p>
-            <input type="text" placeholder="Agrega un comentario..." />
+            <div class="comment">
+              <input type="text" placeholder="Agrega un comentario..." class="comentario"/>
+              <button class="enviarComentario">Enviar</button>
+            </div>
+            <div class="contenedor"></div>
           </div>
         </div>
       </section>
@@ -1412,81 +1432,79 @@
           </nav>
 
           <nav class="lista">
-            <nav class="perfil_sugerencias">
+              <div class="perfil1">
                 <img
                   src="./img/fotos_perfil/evan.jpg"
-                  width="45px"
-                  height="45px"
-                  style="border-radius: 76px"
+                  width="45"
+                  height="45"
+                  style="border-radius: 76px;"
                 />
-                <nav class="username">
-                  <b>evan.castro_</b>
-                  Evangeline Castro
+                <nav class="username_perfil">
+                  <b>eva.castro</b>
+                  Evangeline Castro 
                 </nav>
-
                 <nav class="btn-seguir">Seguir</nav>
-            </nav>
+              </div>
 
-            <nav class="perfil_sugerencias">
-              <img
-                src="./img/fotos_perfil/orange.jpeg"
-                width="45px"
-                style="border-radius: 76px"
-              />
-              <nav class="usernameball">
-                <b>orangeball_basketball
-                </b>
-                Orange Ball Basketball
-              </nav>
+              <div class="perfil2">
+                <img
+                  src="./img/fotos_perfil/orange.jpeg"
+                  width="45"
+                  height="45"
+                  style="border-radius: 76px;"
+                />
+                <nav class="username_perfil">
+                  <b>orange_basketball</b>
+                  Orange Ball Basket
+                </nav>
+                <nav class="btn-seguir">Seguir</nav>
+              </div>
 
-              <nav class="btn-seguir">Seguir</nav>
-            </nav>
+              <div class="perfil3">
+                <img
+                  src="./img/fotos_perfil/karen.jpg"
+                  width="45"
+                  height="45"
+                  style="border-radius: 76px;"
+                />
+                <nav class="username_perfil">
+                  <b>karen_castaño</b>
+                  Karen Castaño Gu
+                </nav>
+                <nav class="btn-seguir">Seguir</nav>
+              </div>
 
-            <nav class="perfil_sugerencias">
+              <div class="perfil4">
+                <img
+                  src="./img/fotos_perfil/eliot.jpeg"
+                  width="45"
+                  height="45"
+                  style="border-radius: 76px;"
+                />
+                <nav class="username_perfil">
+                  <b>eliot media</b>
+                  ELIOT MEDIA US
+                </nav>
+                <nav class="btn-seguir">Seguir</nav>
+              </div>
+
+              <div class="perfil5">
+                <img
+                  src="./img/fotos_perfil/e.jpg"
+                  width="45"
+                  height="45"
+                  style="border-radius: 76px;"
+                />
+                <nav class="username_perfil">
+                  <b>e!</b>
+                  E online latino UK
+                </nav>
+                <nav class="btn-seguir">Seguir</nav>
+              </div>
+
               
-              <img
-                src="./img/fotos_perfil/karen.jpg"
-                width="45px"
-                height="45px"
-                style="border-radius: 76px"
-              />
-              <nav class="username">
-                <b>karen_castano11</b>
-                Karen Castaño
-              </nav>
-
-              <nav class="btn-seguir">Seguir</nav>
-              </nav>
-            </nav>
-
-            <nav class="perfil_sugerencias">
-              <img
-                src="./img/fotos_perfil/e.jpg"
-                width="45px"
-                style="border-radius: 76px"
-              />
-              <nav class="usernamee">
-                <b>eonlinelatino</b>
-                E! Latin America
-              </nav>
-
-              <nav class="btn-seguir">Seguir</nav>
-            </nav>
-            </nav>
-
-            <nav class="perfil_sugerencias">
-              <img
-                src="./img/fotos_perfil/eliot.jpeg"
-                width="45px"
-                style="border-radius: 76px"
-              />
-              <nav class="usernameeliot">
-                <b>eliotmedia</b>
-                ELIOT MEDIA
-              </nav>
-
-              <nav class="btn-seguir">Seguir</nav>
-            </nav>
+ 
+ 
           </nav>
 
           <nav class="footer">

@@ -82,5 +82,51 @@ const buscarContainer = document.querySelector(".menu_buscar");
 const buscar = document.querySelector(".buscar");
 
 buscar.addEventListener("click", () => {
-  buscarContainer.classList.toggle("activado"); 
+  buscarContainer.classList.toggle("activado");
+});
+
+/*Comentario*/
+// Selecciona todos los elementos con la clase "comentario"
+const inputElements = document.querySelectorAll(".comentario");
+
+// Selecciona todos los elementos con la clase "enviarComentario"
+const enviarButtons = document.querySelectorAll(".enviarComentario");
+
+// Selecciona todos los elementos con la clase "contenedor"
+const contenedores = document.querySelectorAll(".contenedor");
+
+// Itera sobre los elementos y agrega el evento a cada uno
+enviarButtons.forEach((enviarButton, index) => {
+  enviarButton.addEventListener("click", () => {
+    // Obtiene el texto ingresado en el elemento correspondiente
+    const textoIngresado = inputElements[index].value;
+
+    // Crea un elemento de párrafo
+    const parrafo = document.createElement("p");
+
+    // Crea un elemento de texto en negrilla solo para "luna ferrer"
+    const textoEnNegrita = document.createElement("strong");
+    textoEnNegrita.textContent = "luna ferrer";
+
+    // Adjunta el texto en negrilla al párrafo
+    parrafo.appendChild(textoEnNegrita);
+
+    // Agrega el texto ingresado después del texto en negrilla
+    parrafo.innerHTML += ` ${textoIngresado}`;
+
+    // Limpia el contenido anterior del contenedor correspondiente
+    contenedores[index].innerHTML = "";
+
+    // Agrega el párrafo al contenedor correspondiente
+    contenedores[index].appendChild(parrafo);
+  });
+});
+
+/*Guardar*/
+
+const guardarContainer = document.querySelector(".menu_guardar");
+const guardar = document.querySelector(".save");
+
+guardar.addEventListener("click", () => {
+  guardarContainer.classList.toggle("activar");
 });

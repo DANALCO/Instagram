@@ -89,13 +89,3 @@
   opacity: 1;
   pointer-events: auto;
 }
-
-/*Boton seguir*/
-.btn-seguir {
-  font-size: 12px;
-  color: #3498db;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-
