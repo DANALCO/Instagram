@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Editar perfil</title>
         <link rel="stylesheet" href="/Main/Main-instagram/css__asidelateral.css">
+        <link rel="stylesheet" href="/Main/Main-instagram/botonesMas.css">
         <link href="css/confi.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,361 +18,364 @@
 
 
     <body>
-
-        <main>
+      <main>
+        <div class="izquierda">
             <div class="izquierda">
-                <div class="aside">
-                    <img class="logo" src="/Main/Main-instagram/Rama Gaby/img/instagram-logo-vector.png" width="103px" />
-                    <div class="contendor_op">
-                        <a href="/Main/Main-instagram/Rama Gaby/index.html">
-                      <div class="inicio" id="inicio-div">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-home-2"
-                          width="30"
-                          height="30"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-                          <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                          <path d="M10 12h4v4h-4z" />
-                        </svg>
-                        Inicio
+              <!--Aside izquierdo-->
+              <div class="aside">
+                <a href="/Main/Main-instagram/Rama Gaby/index.html">
+                <img class="logo" src="/Main/Main-instagram/Rama Gaby/img/instagram-logo-vector.png" width="103px" />
+              </a>
+                <div class="contendor_op">
+                    <a href="/Main/Main-instagram/Rama Gaby/index.html">
+                  <div class="inicio" id="inicio-div">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-home-2"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                      <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                      <path d="M10 12h4v4h-4z" />
+                    </svg>
+                    Inicio
+                  </div>
+                </a>
+
+                  <div class="buscar" id="buscar-div">          
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-search"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                      <path d="M21 21l-6 -6" />
+                    </svg>
+                    Buscar
+                  </div>
+
+                  <div class="menu_buscar activado">
+                    <div class="buscar_up">
+                      <div class="ref_buscar">
+                        <b>Buscar</b>
                       </div>
-                    </a>
-            
-                      <div class="buscar" id="buscar-div">          
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-search"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                          <path d="M21 21l-6 -6" />
-                        </svg>
-                        Buscar
+                      <div class="buscador">
+                        <input type="text" placeholder="Buscar" />
                       </div>
-            
-                      <div class="menu_buscar activado">
-                        <div class="buscar_up">
-                          <div class="ref_buscar">
-                            <b>Buscar</b>
-                          </div>
-                          <div class="buscador">
-                            <input type="text" placeholder="Buscar" />
-                          </div>
-                        </div>
-            
-                        <div class="buscar_down">
-                          <div class="recientes">Recientes</div>
-                          <div class="borrar">Borrar todo</div>
-                        </div>
-                      </div>
-            
-                      <div class="explorar">
-                        <a href="/Main/Main-instagram/proyecto/html/explore.html">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-brand-safari"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
-                          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                        </svg>
-                        Explorar
-                      </div>
-                         </a>
-            
-                         <a href="/Main/Main-instagram/proyecto/html/reels.html">
-                      <div class="reels">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-brand-youtube"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path
-                            d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"
-                          />
-                          <path d="M10 9l5 3l-5 3z" />
-                        </svg>
-                        Reels
-                      </div>
-                     </a>
-            
-                     <a href="/Main/Main-instagram/proyecto nicolas/index.html">
-                      <div class="mensajes">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-brand-messenger"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" />
-                          <path d="M8 13l3 -2l2 2l3 -2" />
-                        </svg>
-                        Mensajes
-                      </div>
-                    </a>
-            
-                      <div class="notificaciones">
-                        <a href="/Main/Main-instagram/proyecto nicolas/index.html">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-heart"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path
-                            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
-                          />
-                        </svg>
-                        Notificaciones
-                      </a>
-                      </div>
-            
-                      <div class="crear">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="icon icon-tabler icon-tabler-circle-plus"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="#000000"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          style="padding-right: 5px; margin-bottom: -5px"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                          <path d="M9 12h6" />
-                          <path d="M12 9v6" />
-                        </svg>
-                        Crear
-                      </div>
-            
-                      <a href="/Main/Main-instagram/proyecto juan pablo/perfil.html">
-                      <div class="perfil_menu">
-                        <img
-                          src="/Main/Main-instagram/Rama Gaby/img/fotos_perfil/perfil1.jpg"
-                          width="25"
-                          height="25"
-                          style="
-                            border-radius: 150px;
-                            padding-right: 5px;
-                            margin-bottom: -5px;
-                          "
-                        />
-                        Perfil
-                      </div>
-                      </a>
                     </div>
-            
-                    <!--Boton más-->
-            
-                    <div class="mas">
+
+                    <div class="buscar_down">
+                      <div class="recientes">Recientes</div>
+                      <div class="borrar">Borrar todo</div>
+                    </div>
+                  </div>
+                  <a href="/Main/Main-instagram/proyecto/html/explore.html">
+                  <div class="explorar">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-brand-safari"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+                      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    </svg>
+                    Explorar
+                  </div>
+                  </a>
+
+                    <a href="/Main/Main-instagram/proyecto/html/reels.html">
+                  <div class="reels">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-brand-youtube"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"
+                      />
+                      <path d="M10 9l5 3l-5 3z" />
+                    </svg>
+                    Reels
+                  </div>
+                </a>
+
+                <a href="/Main/Main-instagram/proyecto nicolas/index.html">
+                  <div class="mensajes">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-brand-messenger"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1" />
+                      <path d="M8 13l3 -2l2 2l3 -2" />
+                    </svg>
+                    Mensajes
+                  </div>
+                </a>
+                  <a href="/Main/Main-instagram/proyecto nicolas/index.html"></a>
+                  <div class="notificaciones">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-heart"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+                      />
+                    </svg>
+                    Notificaciones
+                  </div>
+                  </a>
+
+                  <div class="crear" onclick="toggleCrearw()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-circle-plus"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#000000"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="padding-right: 5px; margin-bottom: -5px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                      <path d="M9 12h6" />
+                      <path d="M12 9v6" />
+                    </svg>
+                    Crear
+                  </div>
+
+                  <a href="/Main/Main-instagram/proyecto juan pablo/perfil.html">
+                  <div class="perfil_menu">
+                    <img
+                      src="/Main/Main-instagram/Rama Gaby/img/fotos_perfil/perfil1.jpg"
+                      width="25"
+                      height="25"
+                      style="
+                        border-radius: 150px;
+                        padding-right: 5px;
+                        margin-bottom: -5px;
+                      "
+                    />
+                    Perfil
+                  </div>
+                  </a>
+                </div>
+
+                <!--Boton más-->
+
+                <div class="mas">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-baseline-density-medium"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#000000"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="padding-right: 5px; margin-bottom: -5px"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 20h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 4h16" />
+                  </svg>
+                  Más
+                  <div class="menu_mas actives">
+                    <div class="ref_mas">
+                      <a href="/Main/Main-instagram/Configuración/confi.html">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-baseline-density-medium"
-                        width="25"
-                        height="25"
+                        class="icon icon-tabler icon-tabler-settings"
+                        width="22"
+                        height="22"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="#000000"
                         fill="none"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        style="padding-right: 5px; margin-bottom: -5px"
+                        style="padding-right: 5px"
                       >
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 20h16" />
-                        <path d="M4 12h16" />
-                        <path d="M4 4h16" />
+                        <path
+                          d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                        />
+                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                       </svg>
-                      Más
-                      <div class="menu_mas actives">
-                        <div class="ref_mas">
-                          <a href="/Main/Main-instagram/Configuración/confi.html">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-settings"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="#000000"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            style="padding-right: 5px"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                              d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
-                            />
-                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                          </svg>
-                          Configuración
-                        </a>
-                        </div>
-            
-                        <div class="ref_mas">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-clock-hour-7"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="#000000"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            style="padding-right: 5px"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                            <path d="M12 12l-2 3" />
-                            <path d="M12 7v5" />
-                          </svg>
-                          Tu actividad
-                        </div>
-            
-                        <div class="ref_mas">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-bookmark"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="#000000"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            style="padding-right: 5px"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                              d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"
-                            />
-                          </svg>
-                          Guardado
-                        </div>
-            
-                        <div class="ref_mas">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-sun-low"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="#000000"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            style="padding-right: 5px"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                            <path d="M4 12h.01" />
-                            <path d="M12 4v.01" />
-                            <path d="M20 12h.01" />
-                            <path d="M12 20v.01" />
-                            <path d="M6.31 6.31l-.01 -.01" />
-                            <path d="M17.71 6.31l-.01 -.01" />
-                            <path d="M17.7 17.7l.01 .01" />
-                            <path d="M6.3 17.7l.01 .01" />
-                          </svg>
-                          Apariencia
-                        </div>
-            
-                        <div class="ref_mas">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-alert-square-rounded"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="#000000"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            style="padding-right: 5px"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                              d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
-                            />
-                            <path d="M12 8v4" />
-                            <path d="M12 16h.01" />
-                          </svg>
-                          Reportar un problema
-                        </div>
-            
-                        <div class="down-table">
-                          <p>Cambiar de cuenta</p>
-                          <p>Salir</p>
-                        </div>
-                      </div>
+                      Configuración
+                    </a>
+                    </div>
+
+                    <div class="ref_mas">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-clock-hour-7"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#000000"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="padding-right: 5px"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 12l-2 3" />
+                        <path d="M12 7v5" />
+                      </svg>
+                      Tu actividad
+                    </div>
+
+                    <div class="ref_mas">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#000000"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="padding-right: 5px"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"
+                        />
+                      </svg>
+                      Guardado
+                    </div>
+
+                    <div class="ref_mas" onclick="toggleAspectow()">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-sun-low"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#000000"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="padding-right: 5px"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                        <path d="M4 12h.01" />
+                        <path d="M12 4v.01" />
+                        <path d="M20 12h.01" />
+                        <path d="M12 20v.01" />
+                        <path d="M6.31 6.31l-.01 -.01" />
+                        <path d="M17.71 6.31l-.01 -.01" />
+                        <path d="M17.7 17.7l.01 .01" />
+                        <path d="M6.3 17.7l.01 .01" />
+                      </svg>
+                      Apariencia
+                    </div>
+
+                    <div class="ref_mas" onclick="toggleProblemw()">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-alert-square-rounded"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#000000"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="padding-right: 5px"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
+                        />
+                        <path d="M12 8v4" />
+                        <path d="M12 16h.01" />
+                      </svg>
+                      Reportar un problema
+                    </div>
+
+                    <div class="down-table">
+                      <p onclick="toggleCambioCuentaw()">Cambiar de cuenta</p>
+                      <a href="/Main/Login/proyecto/login.html">
+                        <p>Salir</p>
+                      </a>
                     </div>
                   </div>
+                </div>
+              </div>
             </div>
-        </main>    
-    
+        </div>
+    </main>    
     <div class="centro">
 
         <div class="c"><a href="https://accountscenter.instagram.com/?entry_point=app_settings" style="text-decoration: none;">
@@ -463,25 +467,194 @@
         </tr>
 
         </table>
-
-        <script>
-            const masContainer = document.querySelector(".menu_mas");
-              const mas = document.querySelector(".mas");
-              
-              mas.addEventListener("click", () => {
-                masContainer.classList.toggle("actives");
-              });
-              </script>
-        
-              <script>
-                const buscarContainer = document.querySelector(".menu_buscar");
-                const buscar = document.querySelector(".buscar");
-                
-                buscar.addEventListener("click", () => {
-                  buscarContainer.classList.toggle("activado"); 
-                });
-                </script>
     </div>
-    
+      <!--elementos barra mas-->
+      <!--este es el menu de informar problema-->
+      <div class="problemaw">
+        <div class="tittlee">
+            <h2>Informar de un problema</h2>
+            <button class="salirProblemaw" style="position: absolute;right: 25px;">X</button>
+        </div>
+        <div style="margin: 15px 16px;"><textarea cols="40" rows="3" id="textoProblema" style="width: 355px;border: 1px #ccc solid;height: 140px;font-size: 15px;" placeholder="Incluye toda la información posible..."></textarea></div>
+        <div style="margin: 0 0 15px 0;"><button class="enviarProblemaw" id="enviarProblema">Enviar informe</button><button class="archivoBotonw">Añadir archivo</button></div>      
+        <div style="opacity: 0.6;font-size: 13px;padding: 0 15px;">Tu nombre de usuario de Instagram y la información del navegador se incluirán automáticamente en el informe.</div>
+      </div>
+      <!--este es el menu de cambio de cuenta-->
+      <div class="cambioCuentaw">
+        <div class="tittlee" style="height: 40px;border-bottom: none;">
+          <button class="salirCambioCuentaw" style="position: absolute;right: 25px;">X</button>
+        </div>
+        <div><img src="/Main/Main-instagram/proyecto/assets/iconos/instagram-logo-vector.png" width="180px" style="margin: 20px 115px 30px 110px;"></div>
+        <div style="padding: 0 50px 0 70px;">
+          <input type="text" id="inputUsuario" placeholder=" Teléfono, usuario o correo electrónico" style="width: 245px;height: 30px;border: solid 1px rgb(134, 133, 133);border-radius: 5px;background-color: rgb(236, 236, 236);" maxlength="300" required>
+          <input type="password" id="inputContraseña" placeholder="Contraseña" style="margin: 10px 0 0 0;width: 245px;height: 30px;border: solid 1px rgb(134, 133, 133);border-radius: 5px;background-color: rgb(236, 236, 236);" required>
+        </div>
+        <div style="margin: 14px 0 0 68px;">
+          <input type="checkbox" name="dto1"><label style="font-size: 14px;"> Guardar datos de inicio de sesión</label>
+        </div>
+        <div>
+          <button class="reinicioCuentaw" id="reinicioCuenta">Entrar</button>
+          <a href="/Main/Main-instagram/proyecto/html/resetPassword.html">
+            <button class="cambioContraseñaw" id="olvideContraseña">¿Has olvidado la contraseña</button>
+          </a>
+        </div>
+      </div>
+      <!--este es el menu de cambio de aspecto-->
+      <div class="cambioAspectow">
+        <div class="tittlee" style="height: 28px;">
+          <button class="salirCambioAspectow" style="position: absolute;left: 13px;opacity: 0.5;"><</button>
+          <h2 style="margin: 0 0 0 35px;opacity: 0.8;">Cambiar aspecto</h2>
+          <img src="/Main/Main-instagram/proyecto/assets/iconos/sun.png" width="18px" style="position: absolute;right: 15px;">
+        </div>
+        <div class="modoOscurow"><div style="padding: 10px 0 0 10px;">Modo oscuro</div><img src="/Main/Main-instagram/proyecto/assets/iconos/boton largo.png" width="35px" style="position: relative;left: 205px;bottom: 23px;"></div>
+      </div>
+      <!--este es el menu de crear-->
+      <div class="crearw">
+        <div class="tittlee">
+          <h2>Crear nueva publicación</h2>
+        </div>
+        <div>
+          <img src="/Main/Main-instagram/proyecto/assets/iconos/crear.png" style="margin: 300px 0 0 300px;">
+          <p style="font-size: 28px;margin: 0 0 0 160px;">Arrastra las fotos y los vídeos aquí</p>
+        </div>
+        <button class="seleccionarArchivow">Seleccionar del ordenador</button>
+      </div>
+      <!--el div oscuridad afecta tanto a informe problema como a cambio de cuenta-->
+      <div class="oscuridadw"></div>
+    <!--script de los botones de la barra mas-->
+    <script>
+      let problemaVisible = false;
+      const oscuridad = document.querySelector('.oscuridadw');
+      const problema = document.querySelector('.problemaw');
+  
+      // Función para mostrar u ocultar "problema"
+      function toggleProblemw() {
+        problemaVisible = !problemaVisible;
+  
+        if (problemaVisible) {
+          oscuridad.style.display = "flex";
+          problema.style.display = "block";
+        } else {
+          oscuridad.style.display = "none";
+          problema.style.display = "none";
+        }
+      }
+  
+      // Obtener el elemento del textarea y el botón "Enviar informe"
+      const textarea = document.getElementById('textoProblema');
+      const enviarBoton = document.getElementById('enviarProblema');
+      
+      // Agregar un event listener para controlar la opacidad y el cursor
+      textarea.addEventListener('input', function () {
+        if (textarea.value.trim() === '') {
+          // Si el textarea está vacío, disminuir la opacidad y cambiar el cursor
+          enviarBoton.style.opacity = '0.5';
+          enviarBoton.style.cursor = '';
+        } else {
+          // Si hay texto en el textarea, restaurar la opacidad y el cursor
+          enviarBoton.style.opacity = '1';
+          enviarBoton.style.cursor = 'pointer';
+        }
+      });
+      
+      // Obtener los elementos de entrada y el botón "Entrar"
+      const inputUsuario = document.getElementById('inputUsuario');
+      const inputContraseña = document.getElementById('inputContraseña');
+      const reinicioCuentaBoton = document.getElementById('reinicioCuenta');
+  
+      // Agregar un event listener para verificar los campos de entrada
+      inputUsuario.addEventListener('input', checkCampos);
+      inputContraseña.addEventListener('input', checkCampos);
+  
+      const cambioCuenta = document.querySelector('.cambioCuentaw');
+      let cambioCuentaVisible = false;
+      // Función para mostrar u ocultar "problema"
+      function toggleCambioCuentaw() {
+        cambioCuentaVisible = !cambioCuentaVisible;
+  
+        if (cambioCuentaVisible) {
+          oscuridad.style.display = "flex";
+          cambioCuenta.style.display = "block";
+        } else {
+          oscuridad.style.display = "none";
+          cambioCuenta.style.display = "none";
+        }
+      }
+      const crear = document.querySelector('.crearw');
+      let crearVisible = false;
+      // Función para mostrar u ocultar "problema"
+      function toggleCrearw() {
+        crearVisible = !crearVisible;
+  
+        if (crearVisible) {
+          oscuridad.style.display = "flex";
+          crear.style.display = "block";
+        } else {
+          oscuridad.style.display = "none";
+          crear.style.display = "none";
+        }
+      }
+      //cambio de aspecto funcion
+      const cambioAspecto = document.querySelector('.cambioAspectow');
+      let cambioAspectoVisible = false;
+      // Función para mostrar u ocultar "cambioAspecto"
+      function toggleAspectow() {
+        cambioAspectoVisible = !cambioAspectoVisible;
+  
+        if (cambioAspectoVisible) {
+          cambioAspecto.style.display = "block";
+        } else {
+          cambioAspecto.style.display = "none";
+        }
+      }
+      function checkCampos() {
+        if (inputUsuario.value.trim() !== '' && inputContraseña.value.trim() !== '') {
+          // Si ambos campos no están vacíos, habilitar el botón
+          reinicioCuentaBoton.removeAttribute('disabled');
+          reinicioCuentaBoton.style.cursor = 'pointer';
+          reinicioCuentaBoton.style.opacity = '1';
+        } else {
+          // Si alguno de los campos está vacío, deshabilitar el botón
+          reinicioCuentaBoton.setAttribute('disabled', 'true');
+          reinicioCuentaBoton.style.opacity = '0.5';
+        }
+      }
+      //controladores de clic a los botones para cerrar "problema", "cambioCuenta" y "cambioAspecto"
+      const cerrarProblema = document.querySelector(".salirProblemaw");
+      const cerrarCambioCuenta = document.querySelector(".salirCambioCuentaw");
+      const cerrarCambioAspecto = document.querySelector(".salirCambioAspectow");
+  
+      cerrarProblema.addEventListener("click", toggleProblemw);
+      cerrarCambioCuenta.addEventListener("click", toggleCambioCuentaw);
+      cerrarCambioAspecto.addEventListener("click", toggleAspectow);
+      // Agrega un controlador de clic a la división oscuridad para ocultar "problema" o "cambioCuenta"
+      oscuridad.addEventListener('click', () => {
+        if (problemaVisible) {
+          toggleProblemw();
+        } 
+        if (cambioCuentaVisible) {
+          toggleCambioCuentaw();
+        } 
+        if (crearVisible) {
+          toggleCrearw();
+        } 
+      });
+    </script>
+  <script>
+    const masContainer = document.querySelector(".menu_mas");
+    const mas = document.querySelector(".mas");
+      
+    mas.addEventListener("click", () => {
+      masContainer.classList.toggle("actives");
+    });
+  </script>
+  <script>
+    const buscarContainer = document.querySelector(".menu_buscar");
+    const buscar = document.querySelector(".buscar");
+        
+    buscar.addEventListener("click", () => {
+      buscarContainer.classList.toggle("activado"); 
+    });
+  </script>
 </body>
 </html>
