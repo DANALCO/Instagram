@@ -77,7 +77,7 @@
 
         // Obtén referencias a elementos adicionales
         const oscuro2 = document.querySelector('.oscuro2');
-        const mas = document.querySelector('.more-container');
+        const masss = document.querySelector('.more-container');
         const share = document.querySelector('.share-container');
         const emoji = document.querySelector('.emoji-container');
 
@@ -87,10 +87,10 @@
 
             if (moreVisible) {
                 oscuro2.style.display = "flex";
-                mas.style.display = "block";
+                masss.style.display = "block";
             } else {
                 oscuro2.style.display = "none";
-                mas.style.display = "none";
+                masss.style.display = "none";
             }
         }
 

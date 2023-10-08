@@ -1,0 +1,175 @@
+.oscuridadw{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100000px;
+    height: 1000000px;
+    background-color: black;
+    z-index: 995;
+    opacity: 0.5;
+    display: none;
+  }
+.problemaw{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 390px;
+    height: 310px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 999;
+    overflow: hidden;
+  }
+.tittlee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    height: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+.tittlee button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    width: 5px;
+  }
+.tittlee h2 {
+    position: relative;
+    right: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+  }
+.enviarProblemaw{
+    background-color: #0095f6;
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    margin: 0 0 0 18px;
+    width: 120px;
+    border-radius: 7px;
+    border: none;
+    opacity: 0.5;
+  }
+.archivoBotonw{
+    color: black;
+    background-color: #dcdcdc;
+    height: 30px;
+    font-size: 13px;
+    width: 120px;
+    border-radius: 7px;
+    border: none;
+    margin: 0 0 0 115px;
+    cursor: pointer;
+  }
+.archivoBotonw:hover{
+    filter: brightness(90%);
+  }
+  .enviarProblemaw:hover{
+    filter: brightness(90%);
+  }
+.cambioCuentaw{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 390px;
+    height: 415px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 999;
+    overflow: hidden;
+  }
+.reinicioCuentaw{
+    background-color: #0095f6;
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    margin: 18px 0 0 70px;
+    width: 250px;
+    border-radius: 7px;
+    border: none;
+    opacity: 0.5;
+  }
+.reinicioCuentaw:disabled {
+    /* Estilo cuando el botón está deshabilitado */
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+.cambioContraseñaw{
+    background-color: transparent;
+    color: #0095f6;
+    font-size: 13px;
+    height: 30px;
+    margin: 18px 0 0 70px;
+    width: 250px;
+    border-radius: 7px;
+    border: none;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+.cambioAspectow{
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 280px;
+    height: 115px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+.modoOscurow{
+    background-color: white;
+    width: 250px;
+    height: 45px;
+    margin: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+  }
+.modoOscurow:hover{
+    background-color: #ccc;
+  }
+.crearw{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    height: 750px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 999;
+    overflow: hidden;
+  }
+.seleccionarArchivow{
+    background-color: #0095f6;
+    color: white;
+    font-size: 13px;
+    height: 38px;
+    margin: 18px 0 0 230px;
+    width: 250px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+  }
+.seleccionarArchivow:hover{
+    filter: brightness(90%);
+  }
