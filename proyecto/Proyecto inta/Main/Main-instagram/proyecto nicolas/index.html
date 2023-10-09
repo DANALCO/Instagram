@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandeja de entrada • Chats</title>
-    <link rel="stylesheet" href="/Main/Main-instagram/css__asidelateral.css">
     <link href="./css/index.css" rel="stylesheet" />
     <link href="./css/botones.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/Main/Main-instagram/botonesMas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -82,8 +82,8 @@
               <div class="borrar">Borrar todo</div>
             </div>
           </div>
+          <a href="/Main/Main-instagram/proyecto/html/explore.html">
           <div class="explorar">
-            <a href="/Main/Main-instagram/proyecto/html/explore.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-safari"
@@ -230,7 +230,7 @@
             });
           </script>
 
-          <div class="crear">
+          <div class="crear" onclick="toggleCrearw()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-circle-plus"
@@ -249,6 +249,7 @@
               <path d="M9 12h6" />
               <path d="M12 9v6" />
             </svg>
+            
             
           </div>
 
@@ -292,6 +293,7 @@
           
           <div class="menu_mas actives">
             <div class="ref_mas">
+              <a href="/Main/Main-instagram/Configuración/confi.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-settings"
@@ -312,6 +314,7 @@
                 <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
               </svg>
               Configuración
+            </a>
             </div>
 
             <div class="ref_mas">
@@ -358,7 +361,7 @@
               Guardado
             </div>
 
-            <div class="ref_mas">
+            <div class="ref_mas" onclick="toggleAspectow()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-sun-low"
@@ -386,7 +389,7 @@
               Apariencia
             </div>
 
-            <div class="ref_mas">
+            <div class="ref_mas" onclick="toggleProblemw()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-alert-square-rounded"
@@ -411,8 +414,10 @@
             </div>
 
             <div class="down-table">
-              <p>Cambiar de cuenta</p>
+              <p onclick="toggleCambioCuentaw()">Cambiar de cuenta</p>
+              <a href="/Main/Login/proyecto/login.html">
               <p>Salir</p>
+            </a>
             </div>
           </div>
         </div>
@@ -421,7 +426,8 @@
 
       <section class="chats">
       <div class="container_chats">
-        <a href="#"><H1>lunaferrer</H1></a>
+        <a href="#"><H1>lunaferrer</H1>
+        </a>
           <h4>Mensajes</h4>
        <a href="#"> <div class="chat">
           <img
@@ -466,18 +472,228 @@
     <img src="./img/chat.png" >
     <h3>Tus Mensajes</h3>
     <p>Envía fotos y mensajes privados a un amigo o grupo</p>
-    <a href="#">Enviar mensaje</a>
+    <a class="Enviarmenj" onclick="toggleenviarm()" href="#">Enviar mensaje</a>
   </div>
       </div>
     </main>
+   
+      <!--elementos barra mas-->
+      <!--este es el menu de informar problema-->
+      <div class="problemaw">
+        <div class="tittlee">
+            <h2>Informar de un problema</h2>
+            <button class="salirProblemaw" style="position: absolute;right: 25px;">X</button>
+        </div>
+        <div style="margin: 15px 16px;"><textarea cols="40" rows="3" id="textoProblema" style="width: 355px;border: 1px #ccc solid;height: 140px;font-size: 15px;" placeholder="Incluye toda la información posible..."></textarea></div>
+        <div style="margin: 0 0 15px 0;"><button class="enviarProblemaw" id="enviarProblema">Enviar informe</button><button class="archivoBotonw">Añadir archivo</button></div>      
+        <div style="opacity: 0.6;font-size: 13px;padding: 0 15px;">Tu nombre de usuario de Instagram y la información del navegador se incluirán automáticamente en el informe.</div>
+      </div>
+      <!--este es el menu de cambio de cuenta-->
+      <div class="cambioCuentaw">
+        <div class="tittlee" style="height: 40px;border-bottom: none;">
+          <button class="salirCambioCuentaw" style="position: absolute;right: 25px;">X</button>
+        </div>
+        <div><img src="/Main/Main-instagram/proyecto/assets/iconos/instagram-logo-vector.png" width="180px" style="margin: 20px 115px 30px 110px;"></div>
+        <div style="padding: 0 50px 0 70px;">
+          <input type="text" id="inputUsuario" placeholder=" Teléfono, usuario o correo electrónico" style="width: 245px;height: 30px;border: solid 1px rgb(134, 133, 133);border-radius: 5px;background-color: rgb(236, 236, 236);" maxlength="300" required>
+          <input type="password" id="inputContraseña" placeholder="Contraseña" style="margin: 10px 0 0 0;width: 245px;height: 30px;border: solid 1px rgb(134, 133, 133);border-radius: 5px;background-color: rgb(236, 236, 236);" required>
+        </div>
+        <div style="margin: 14px 0 0 68px;">
+          <input type="checkbox" name="dto1"><label style="font-size: 14px;"> Guardar datos de inicio de sesión</label>
+        </div>
+        <div>
+          <button class="reinicioCuentaw" id="reinicioCuenta">Entrar</button>
+          <a href="/Main/Main-instagram/proyecto/html/resetPassword.html">
+            <button class="cambioContraseñaw" id="olvideContraseña">¿Has olvidado la contraseña</button>
+          </a>
+        </div>
+      </div>
+      <!--este es el menu de cambio de aspecto-->
+      <div class="cambioAspectow">
+        <div class="tittlee" style="height: 28px;">
+          <button class="salirCambioAspectow" style="position: absolute;left: 13px;opacity: 0.5;"><</button>
+          <h2 style="margin: 0 0 0 35px;opacity: 0.8;">Cambiar aspecto</h2>
+          <img src="/Main/Main-instagram/proyecto/assets/iconos/sun.png" width="18px" style="position: absolute;right: 15px;">
+        </div>
+        <div class="modoOscurow"><div style="padding: 10px 0 0 10px;">Modo oscuro</div><img src="/Main/Main-instagram/proyecto/assets/iconos/boton largo.png" width="35px" style="position: relative;left: 205px;bottom: 23px;"></div>
+      </div>
+      <!--este es el menu de crear-->
+      <div class="crearw">
+        <div class="tittlee">
+          <h2>Crear nueva publicación</h2>
+        </div>
+        <div>
+          <img src="/Main/Main-instagram/proyecto/assets/iconos/crear.png" style="margin: 300px 0 0 300px;">
+          <p style="font-size: 28px;margin: 0 0 0 160px;">Arrastra las fotos y los vídeos aquí</p>
+        </div>
+        <button class="seleccionarArchivow">Seleccionar del ordenador</button>
+      </div>
+      <!--el div oscuridad afecta tanto a informe problema como a cambio de cuenta-->
+      <div class="oscuridadw"></div>
+      <!--Boton enviar mensajes-->
+      <div class="enviarm activado">
+        <div class="tittlee">
+          <h2>Nuevo Mensaje</h2>
+        </div>
+        <div class="buscadorchat_down">
+          <div class="buscadorchat">
+            <div class="para">Para: </div>
+            <input type="text" placeholder="Buscar" />
+          </div>
+        </div>
+        <a href="#" class="btnchat">Chat</a>
+      </div>
+    </main>
+    <!--script de los botones de la barra mas-->
     <script>
-      const buscarContainer = document.querySelector(".menu_buscar");
-      const buscar = document.querySelector(".buscar");
+      let problemaVisible = false;
+      const oscuridad = document.querySelector('.oscuridadw');
+      const problema = document.querySelector('.problemaw');
+  
+      // Función para mostrar u ocultar "problema"
+      function toggleProblemw() {
+        problemaVisible = !problemaVisible;
+  
+        if (problemaVisible) {
+          oscuridad.style.display = "flex";
+          problema.style.display = "block";
+        } else {
+          oscuridad.style.display = "none";
+          problema.style.display = "none";
+        }
+      }
+  
+      // Obtener el elemento del textarea y el botón "Enviar informe"
+      const textarea = document.getElementById('textoProblema');
+      const enviarBoton = document.getElementById('enviarProblema');
       
-      buscar.addEventListener("click", () => {
-        buscarContainer.classList.toggle("activado"); 
+      // Agregar un event listener para controlar la opacidad y el cursor
+      textarea.addEventListener('input', function () {
+        if (textarea.value.trim() === '') {
+          // Si el textarea está vacío, disminuir la opacidad y cambiar el cursor
+          enviarBoton.style.opacity = '0.5';
+          enviarBoton.style.cursor = '';
+        } else {
+          // Si hay texto en el textarea, restaurar la opacidad y el cursor
+          enviarBoton.style.opacity = '1';
+          enviarBoton.style.cursor = 'pointer';
+        }
       });
-      </script>
+      
+      // Obtener los elementos de entrada y el botón "Entrar"
+      const inputUsuario = document.getElementById('inputUsuario');
+      const inputContraseña = document.getElementById('inputContraseña');
+      const reinicioCuentaBoton = document.getElementById('reinicioCuenta');
+  
+      // Agregar un event listener para verificar los campos de entrada
+      inputUsuario.addEventListener('input', checkCampos);
+      inputContraseña.addEventListener('input', checkCampos);
+  
+      const cambioCuenta = document.querySelector('.cambioCuentaw');
+      let cambioCuentaVisible = false;
+      // Función para mostrar u ocultar "problema"
+      function toggleCambioCuentaw() {
+        cambioCuentaVisible = !cambioCuentaVisible;
+  
+        if (cambioCuentaVisible) {
+          oscuridad.style.display = "flex";
+          cambioCuenta.style.display = "block";
+        } else {
+          oscuridad.style.display = "none";
+          cambioCuenta.style.display = "none";
+        }
+      }
+      const crear = document.querySelector('.crearw');
+      let crearVisible = false;
+      // Función para mostrar u ocultar "problema"
+      function toggleCrearw() {
+        crearVisible = !crearVisible;
+  
+        if (crearVisible) {
+          oscuridad.style.display = "flex";
+          crear.style.display = "block";
+        } else {
+          oscuridad.style.display = "none";
+          crear.style.display = "none";
+        }
+      }
+      //cambio de aspecto funcion
+      const cambioAspecto = document.querySelector('.cambioAspectow');
+      let cambioAspectoVisible = false;
+      // Función para mostrar u ocultar "cambioAspecto"
+      function toggleAspectow() {
+        cambioAspectoVisible = !cambioAspectoVisible;
+  
+        if (cambioAspectoVisible) {
+          cambioAspecto.style.display = "block";
+        } else {
+          cambioAspecto.style.display = "none";
+        }
+      }
+      function checkCampos() {
+        if (inputUsuario.value.trim() !== '' && inputContraseña.value.trim() !== '') {
+          // Si ambos campos no están vacíos, habilitar el botón
+          reinicioCuentaBoton.removeAttribute('disabled');
+          reinicioCuentaBoton.style.cursor = 'pointer';
+          reinicioCuentaBoton.style.opacity = '1';
+        } else {
+          // Si alguno de los campos está vacío, deshabilitar el botón
+          reinicioCuentaBoton.setAttribute('disabled', 'true');
+          reinicioCuentaBoton.style.opacity = '0.5';
+        }
+      }
+      //controladores de clic a los botones para cerrar "problema", "cambioCuenta" y "cambioAspecto"
+      const cerrarProblema = document.querySelector(".salirProblemaw");
+      const cerrarCambioCuenta = document.querySelector(".salirCambioCuentaw");
+      const cerrarCambioAspecto = document.querySelector(".salirCambioAspectow");
+  
+      cerrarProblema.addEventListener("click", toggleProblemw);
+      cerrarCambioCuenta.addEventListener("click", toggleCambioCuentaw);
+      cerrarCambioAspecto.addEventListener("click", toggleAspectow);
+      // Agrega un controlador de clic a la división oscuridad para ocultar "problema" o "cambioCuenta"
+      oscuridad.addEventListener('click', () => {
+        if (problemaVisible) {
+          toggleProblemw();
+        } 
+        if (cambioCuentaVisible) {
+          toggleCambioCuentaw();
+        } 
+        if (crearVisible) {
+          toggleCrearw();
+        } 
+      });
+    </script>
+  <script>
+    const masContainer = document.querySelector(".menu_mas");
+    const mas = document.querySelector(".mas");
+      
+    mas.addEventListener("click", () => {
+      masContainer.classList.toggle("actives");
+    });
+  </script>
+  <script>
+    const buscarContainer = document.querySelector(".menu_buscar");
+    const buscar = document.querySelector(".buscar");
+        
+    buscar.addEventListener("click", () => {
+      buscarContainer.classList.toggle("activado"); 
+    });
+
+    const btnenviarm = document.querySelector('.enviarm');
+    let btnenviarmVisible = false;
+    // Función para mostrar u ocultar "problema"
+    function toggleenviarm() {
+      btnenviarmVisible = !btnenviarmVisible;
+
+      if (btnenviarmVisible) {
+        oscuridad.style.display = "flex";
+        btnenviarm.style.display = "block";
+      } else {
+        oscuridad.style.display = "none";
+        btnenviarm.style.display = "none";
+      }
+    }
+  </script>
     <script src="./js/mas.js"></script>
   </body>
 </html>
