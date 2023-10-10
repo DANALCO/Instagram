@@ -34,6 +34,16 @@
     height: 20px;
     border-bottom: 1px solid #ccc;
   }
+.tittlee1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  height: 8.3%;
+  border-bottom: 1px solid #ccc;
+}  
 .tittlee button {
     background-color: transparent;
     border: none;
@@ -42,6 +52,10 @@
     cursor: pointer;
     width: 5px;
   }
+.tittlee1 button {
+  background-color: transparent;
+  cursor: pointer;
+}  
 .tittlee h2 {
     position: relative;
     right: 0px;
@@ -50,6 +64,14 @@
     margin: 0 auto;
     text-align: center;
   }
+.tittlee1 h2 {
+  position: relative;
+  right: 0px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 auto;
+  text-align: center;
+} 
 .enviarProblemaw{
     background-color: #0095f6;
     color: white;
@@ -151,20 +173,34 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 720px;
-    height: 750px;
+    width: 33%;
+    height: 70%;
     background-color: white;
     margin: 0 auto;
     border-radius: 10px;
     z-index: 999;
     overflow: hidden;
   }
+  .crearw1{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+    height: 70%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 999;
+    overflow: hidden;
+  } 
 .seleccionarArchivow{
     background-color: #0095f6;
     color: white;
     font-size: 13px;
     height: 38px;
-    margin: 18px 0 0 230px;
+    margin: 7% 0% 0% 27%;;
     width: 250px;
     border-radius: 7px;
     border: none;
