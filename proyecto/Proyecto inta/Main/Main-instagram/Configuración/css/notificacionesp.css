@@ -13,6 +13,7 @@ body{
     float: left; /*manuel*/
     width: 17%;
     height: 100vh;
+    border: none;
 }
 .centro{
     float: left;
@@ -20,6 +21,7 @@ body{
     overflow-y: scroll;
     padding: 15px;
     height: 95.5vh;
+    margin: 0 0 0 1.5%;
     align-items: center;
 }
 
