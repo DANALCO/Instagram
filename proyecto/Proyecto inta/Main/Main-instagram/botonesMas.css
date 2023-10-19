@@ -144,8 +144,10 @@
   }
 .cambioAspectow{
     display: none;
-    overflow: hidden;
     position: absolute;
+    top: 720px;
+    overflow: hidden;
+    z-index: 990;
     width: 280px;
     height: 115px;
     border-radius: 15px;
@@ -170,6 +172,8 @@
 .crearw{
     display: none;
     position: fixed;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -181,26 +185,11 @@
     z-index: 999;
     overflow: hidden;
   }
-  .crearw1{
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 33%;
-    height: 70%;
-    background-color: white;
-    margin: 0 auto;
-    border-radius: 10px;
-    z-index: 999;
-    overflow: hidden;
-  } 
 .seleccionarArchivow{
     background-color: #0095f6;
     color: white;
     font-size: 13px;
     height: 38px;
-    margin: 7% 0% 0% 27%;;
     width: 250px;
     border-radius: 7px;
     border: none;
